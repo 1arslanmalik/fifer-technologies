@@ -26,7 +26,7 @@ const Navbar = () => {
             <div className="n-container">
                 {/* left side */}
                 <div className="n-logo">
-                    <span>COTEK TECH</span>
+                    <span className="text-3xl">FIFER TECHNOLOGIES</span>
                 </div>
 
                 {/* right side */}
@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* mobile version */}
         <div className="nm-container">
             {/* logo */}
-            <span>COTEK TECH</span>
+            <span>FIFER TECHNOLOGIES</span>
 
             {/* menu icon */}
             {

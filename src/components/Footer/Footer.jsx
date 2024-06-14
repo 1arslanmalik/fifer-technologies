@@ -10,21 +10,21 @@ const Footer = () => {
                 <span className="title">
                     Get Funded Today!
                 </span>
-                <EmailBox />
+                {/* <EmailBox />     */}
 
-                <hr/>
-                <div className="f-menu">
+                {/* <hr/> */}
+                {/* <div className="f-menu">
                     <span>Home</span>
                     <span>What we do</span>
                     <span>how it works</span>
                     <span>who we invest</span>
                     <span>testimonials</span>
-                </div>
-                <hr />
+                </div> */}
+                {/* <hr /> */}
 
-                <span className='text'>
+                {/* <span className='text'>
                     Made with love by Cotek Technologies
-                </span>
+                </span> */}
             </div>
         </div>
     </div>
