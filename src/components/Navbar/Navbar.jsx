@@ -13,6 +13,7 @@ const Navbar = () => {
     const [mobileMenuOpened, setMobileMenuOpened] = useState(false)
     const [navStyle, setNavStyle] = useState("");
     const { scrollYProgress } = useScroll();
+    const [currentSection, setCurrentSection] = useState("Home")
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         if (latest > 0.2) {
             setNavStyle("sticky");
@@ -23,7 +24,6 @@ const Navbar = () => {
 
     return (
         <div className={`n-wrapper ${navStyle} bg-russian-violet`}>
-            {/* <h1>asasassa</h1> */}
             <div className="flex flex-col md:flex-row justify-evenly bg-ultra-violet bg-opacity-20">
                 <div className="h-full flex items-center w-full md:w-screen justify-evenly py-2">
                     <div className="flex md:flex-row items-center md:mx-4">
@@ -45,27 +45,55 @@ const Navbar = () => {
                 <div className="n-container">
                     {/* left side */}
                     <div className="n-logo">
-                        <span className="text-3xl">FIFER TECHNOLOGIES</span>
+                        <span className="text-3xl text-white">FIFER TECHNOLOGIES</span>
                     </div>
 
                     {/* right side */}
                     <div className="n-right">
                         <div className="n-menu">
                             <Link to="wwd-wrapper" spy={true} smooth={true} >
-                                <span className="">Home</span>
+                                <span
+                                    className={`${currentSection === "Home" ? "text-white border-b-2 py-1" : "null"}`}
+                                    onClick={() => { setCurrentSection("Home") }}
+                                >
+                                    Home
+                                </span>
                             </Link>
                             <Link to="hiw-wrapper" spy smooth offset={100} >
-                                <span>About Us</span>
+                                <span
+                                    className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
+                                    onClick={() => { setCurrentSection("About Us") }}
+                                >
+                                    About Us
+                                </span>
                             </Link>
                             <Link to="wwi-wrapper" spy smooth >
-                                <span>Services</span>
+                                <span
+                                    className={`${currentSection === "Services" ? "text-white border-b-2 py-1" : "null"}`}
+                                    onClick={() => { setCurrentSection("Services") }}
+                                >
+                                    Services
+                                </span>
                                 {/* dropdown here */}
                             </Link>
                             <Link to="t-wrapper" spy smooth offset={100} >
-                                <span>Testimonials</span>
+                                                                <span
+                                    className={`${currentSection === "Testimonials" ? "text-white border-b-2 py-1" : "null"}`}
+                                    onClick={() => { setCurrentSection("Testimonials") }}
+                                >
+                                    Testimonials
+                                </span>
+                            </Link>
+                            <Link to="" spy smooth offset={100} >
+                            <span
+                                    className={`${currentSection === "Contact Us" ? "text-white border-b-2 py-1" : "null"}`}
+                                    onClick={() => { setCurrentSection("Contact Us") }}
+                                >
+                                    Contact Us
+                                </span>
                             </Link>
                         </div>
-                        <div className="fund-button bg-african-violet text-black font-bold font-md flex justify-center">
+                        <div className="fund-button bg-african-violet text-white font-bold font-md flex justify-center">
                             <button>Get Started</button>
                         </div>
                     </div>
@@ -75,32 +103,37 @@ const Navbar = () => {
             {/* mobile version */}
             <div className="nm-container">
                 {/* logo */}
-                <span>FIFER TECHNOLOGIES</span>
+                <span className="text-white">FIFER TECHNOLOGIES</span>
 
                 {/* menu icon */}
                 {
                     !mobileMenuOpened ?
                         <BiMenuAltRight
+                            color='white'
                             size={30}
                             onClick={() => setMobileMenuOpened(true)}
                         /> :
-                        <RxCross2
-                            size={30}
-                            onClick={() => setMobileMenuOpened(false)}
-                        />
+                        <div className="bg-african-violet p-2 rounded-full">
+                            <RxCross2
+                                size={30}
+                                onClick={() => setMobileMenuOpened(false)}
+                                color='white'
+                            />
+                        </div>
                 }
 
                 {/* mobile menu */}
-                <div className="nm-menu"
-                    style={{ transform: mobileMenuOpened && "translateX(0%)" }}
+                <div className="nm-menu bg-african-violet w-1/2  sm:w-1/3 text-black bg-opacity-100"
+                    style={{ transform: mobileMenuOpened ? "translateX(0%)" : null }}
                 >
-                    <span>What we do</span>
-                    <span>How it works</span>
-                    <span>Who we invest in</span>
+                    <span>Home</span>
+                    <span>About Us</span>
+                    <span>Services</span>
                     <span>Testimonials</span>
-                    <div className="m-funded-button">
-                        Get Funded
-                    </div>
+                    <span>Contact Us</span>
+                    {/* <div className="m-funded-button bg-ultra-violet text-white">
+                        Get Started
+                    </div> */}
                 </div>
 
             </div>
