@@ -22,27 +22,24 @@ const Navbar = () => {
     })
 
     return (
-        <div className={`n-wrapper ${navStyle}`}>
+        <div className={`n-wrapper ${navStyle} bg-russian-violet`}>
             {/* <h1>asasassa</h1> */}
-            <div className="flex justify-evenly bg-black">
-                    <div className="text-white h-full flex py-1 items-center w-screen justify-evenly">
-                        <div className="flex">
-                            <div className="mx-5 flex items-center">
-                                <FaLocationDot />
-                            </div>
-                            <h1>1129 Main Street, Vancouver BC V6A4B6</h1>
+            <div className="flex flex-col md:flex-row justify-evenly bg-ultra-violet bg-opacity-20">
+                <div className="h-full flex items-center w-full md:w-screen justify-evenly py-2">
+                    <div className="flex md:flex-row items-center md:mx-4">
+                        <div className="mx-3 flex items-center">
+                            <FaLocationDot />
                         </div>
-                        <div className="flex">
-                            <div className="mx-5 flex items-center">
-                                <MdEmail />
-                            </div>
-                            <h1>johndoe@gmail.com</h1>
-                        </div>
+                        <h1 className="text-white text-xs sm:text-sm md:text-base">1129 Main Street, Vancouver BC V6A4B6</h1>
                     </div>
-                    {/* <div className="bg-black text-white h-full flex py-1 items-center w-full">
-
-                    </div> */}
+                    <div className="flex md:flex-row items-center md:mx-4">
+                        <div className="mx-3 flex items-center">
+                            <MdEmail />
+                        </div>
+                        <h1 className="text-white text-xs sm:text-sm md:text-base">johndoe@gmail.com</h1>
+                    </div>
                 </div>
+            </div>
             {/* desktop version */}
             <div className="container">
                 <div className="n-container">
@@ -55,20 +52,21 @@ const Navbar = () => {
                     <div className="n-right">
                         <div className="n-menu">
                             <Link to="wwd-wrapper" spy={true} smooth={true} >
-                                <span>Home</span>
+                                <span className="">Home</span>
                             </Link>
                             <Link to="hiw-wrapper" spy smooth offset={100} >
-                                <span>How it works</span>
+                                <span>About Us</span>
                             </Link>
                             <Link to="wwi-wrapper" spy smooth >
-                                <span>Who we invest in</span>
+                                <span>Services</span>
+                                {/* dropdown here */}
                             </Link>
                             <Link to="t-wrapper" spy smooth offset={100} >
                                 <span>Testimonials</span>
                             </Link>
                         </div>
-                        <div className="fund-button">
-                            Get Funded
+                        <div className="fund-button bg-african-violet text-black font-bold font-md flex justify-center">
+                            <button>Get Started</button>
                         </div>
                     </div>
                 </div>

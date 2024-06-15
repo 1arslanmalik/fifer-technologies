@@ -1,5 +1,5 @@
 .h-wrapper {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     height: 120vh;
     overflow: hidden;
 }

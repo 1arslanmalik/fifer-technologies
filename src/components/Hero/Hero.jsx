@@ -39,8 +39,8 @@ const Hero = () => {
 
   return (
     <div className="h-wrapper">
-        <div className="container">
-            <img src="hero/hero-arrow.png" alt="" className="h-arrow" />
+        <div className="container bg-red-600">
+            {/* <img src="hero/hero-arrow.png" alt="" className="h-arrow" /> */}
             <div className="h-container">
                 {/* left Side */}
                 <div className="h-left">
