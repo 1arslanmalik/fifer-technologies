@@ -65,7 +65,7 @@ const Hero = () => {
                                 ))
                             }
                         </div>
-                        <div className="image-row">
+                        <div className="image-row mx-2">
                             {
                                 HeroData.slice(3, 6).map((person, i) => (
                                     <div className='person-pill' key={i}>
@@ -92,8 +92,8 @@ const Hero = () => {
                     <div className="h-right">
                         <div className="flex flex-col text-5xl font-bold space-y-5 w-3/4 h-title">
                             <span className="">Leverage Your</span>
-                            <div className="uppercase text-white bg-ultra-violet pt-2 px-2 flex items-center">
-                                <span >Digital Business</span>
+                            <div className="uppercase text-white bg-ultra-violet pt-2 px-2 flex items-center no-wrap">
+                                <span className="truncate no-wrap">Digital Business</span>
                             </div>
                             <span className="">Today !</span>
                         </div>
