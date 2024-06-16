@@ -2,6 +2,7 @@
     /* background-color: var(--primary-color); */
     height: 120vh;
     overflow: hidden;
+    background-color: #12130F;
 }
 
 .h-wrapper .container {
@@ -44,12 +45,12 @@
 .person-pill {
     height: 15rem;
     width: 6rem;
-    border-radius: 999px;
+    /* border-radius: 999px; */
     overflow: hidden;
 }
 
 .person-pill-bg {
-    border-radius: 999px;
+    border-radius: 5px;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -78,21 +79,22 @@
 .h-title {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    color: var(--third-color);
+    width: auto;
+    /* gap: 2rem; */
+    /* color: var(--third-color); */
     font-size: 3.5rem;
     font-weight: bold;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
-.h-title>:nth-child(3) {
+/* .h-title>:nth-child(3) {
     color: white;
-}
+} */
 
 .h-description {
-    color: white;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    /* color: white; */
+    /* font-size: 1.4rem;
+    line-height: 2rem; */
 }
 
 @media (max-width: 1024px) {
@@ -117,6 +119,9 @@
     .h-right {
         flex: 1;
         align-items: center;
+        margin-right: 20px;
+        margin-left: 20px;
+        width: 90%;
     }
 
     .h-title {

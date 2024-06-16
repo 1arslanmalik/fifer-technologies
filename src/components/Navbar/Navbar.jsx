@@ -36,7 +36,7 @@ const Navbar = () => {
                         <div className="mx-3 flex items-center">
                             <MdEmail />
                         </div>
-                        <h1 className="text-white text-xs sm:text-sm md:text-base">johndoe@gmail.com</h1>
+                        <h1 className="text-white text-xs sm:text-sm md:text-base pr-5">johndoe@gmail.com</h1>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
                                 </span>
                             </Link>
                         </div>
-                        <div className="fund-button bg-african-violet text-white font-bold font-md flex justify-center">
+                        <div className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center">
                             <button>Get Started</button>
                         </div>
                     </div>
@@ -131,9 +131,6 @@ const Navbar = () => {
                     <span>Services</span>
                     <span>Testimonials</span>
                     <span>Contact Us</span>
-                    {/* <div className="m-funded-button bg-ultra-violet text-white">
-                        Get Started
-                    </div> */}
                 </div>
 
             </div>
