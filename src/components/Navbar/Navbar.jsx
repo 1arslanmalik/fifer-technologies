@@ -10,20 +10,21 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Navbar = () => {
-    const [mobileMenuOpened, setMobileMenuOpened] = useState(false)
+    const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
     const [navStyle, setNavStyle] = useState("");
     const { scrollYProgress } = useScroll();
-    const [currentSection, setCurrentSection] = useState("Home")
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if (latest > 0.2) {
-            setNavStyle("sticky");
-        } else {
-            setNavStyle("")
-        }
-    })
+    const [currentSection, setCurrentSection] = useState("Home");
+
+    // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    //     if (latest > 0.15 || latest > 0.20) {
+    //         setNavStyle("sticky");
+    //     } else {
+    //         setNavStyle("");
+    //     }
+    // });
 
     return (
-        <div className={`n-wrapper ${navStyle} bg-russian-violet`}>
+        <div className={`n-wrapper ${navStyle} sticky bg-russian-violet`}>
             <div className="flex flex-col md:flex-row justify-evenly bg-ultra-violet bg-opacity-20">
                 <div className="h-full flex items-center w-full md:w-screen justify-evenly py-2">
                     <div className="flex md:flex-row items-center md:mx-4">
@@ -51,7 +52,7 @@ const Navbar = () => {
                     {/* right side */}
                     <div className="n-right">
                         <div className="n-menu">
-                            <Link to="wwd-wrapper" spy={true} smooth={true} >
+                            <Link to="home" spy={true} smooth={true} >
                                 <span
                                     className={`${currentSection === "Home" ? "text-white border-b-2 py-1" : "null"}`}
                                     onClick={() => { setCurrentSection("Home") }}
@@ -59,7 +60,7 @@ const Navbar = () => {
                                     Home
                                 </span>
                             </Link>
-                            <Link to="hiw-wrapper" spy smooth offset={100} >
+                            <Link to="whoarewe" spy smooth offset={100} >
                                 <span
                                     className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
                                     onClick={() => { setCurrentSection("About Us") }}
@@ -123,7 +124,7 @@ const Navbar = () => {
                 }
 
                 {/* mobile menu */}
-                <div className="nm-menu bg-african-violet w-1/2  sm:w-1/3 text-black bg-opacity-100"
+                <div className="nm-menu bg-african-violet w-1/2 sm:w-1/3 text-black bg-opacity-100"
                     style={{ transform: mobileMenuOpened ? "translateX(0%)" : null }}
                 >
                     <span>Home</span>

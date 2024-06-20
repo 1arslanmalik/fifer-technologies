@@ -16,7 +16,9 @@ module.exports = {
       'lilac': "#BE95C4",
       'lavender': "#E0B1CB",
       'white': "#ffffff",
-      'black': "#000000"
+      'black': "#000000",
+      'blacklite': "#12130F",
+      'platinum': "#EAE6E5"
     },
     extend: {},
   },

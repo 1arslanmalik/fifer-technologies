@@ -11,16 +11,18 @@ import HowItWorks from '@/src/components/HowItWorks/HowItWorks';
 import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
 import Testimonials from '@/src/components/Testimonials/Testimonials';
 import Footer from '@/src/components/Footer/Footer';
+import WhoAreWe from '@/src/components/WhoAreWe/WhoAreWe';
 
 export default function Home() {
 
   const controls = useAnimation()
 
   return (
-    <motion.div className="app" animate={controls}>
+    <motion.div className="app home" animate={controls}>
       <Navbar />
       <Hero />
-      <BrandingVideo />
+      {/* <BrandingVideo /> */}
+      <WhoAreWe />
       <WhatWeDo />
       <motion.div
       onViewportEnter={()=> 

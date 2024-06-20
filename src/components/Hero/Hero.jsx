@@ -2,7 +2,6 @@
 
 import React from 'react'
 import './Hero.css'
-import EmailBox from '../EmailBox/EmailBox'
 import { HeroData } from '@/src/utils/data'
 import { motion } from 'framer-motion'
 
@@ -38,8 +37,8 @@ const Hero = () => {
     })
 
     return (
-        <div className="h-wrapper">
-            <div className="container bg-red-600">
+        <div className=" bg-blacklite flex items-start">
+            <div className="container">
                 {/* <img src="hero/hero-arrow.png" alt="" className="h-arrow" /> */}
                 <div className="h-container">
                     {/* left Side */}
