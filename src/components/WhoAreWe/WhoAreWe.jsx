@@ -47,9 +47,9 @@ const WhoAreWe = () => {
                         <span className="rounded-sm flex items-center pt-2 bg-russian-violet text-white z-10 text-2xl sm:text-6xl px-2 uppercase font-bold opacity-100">
                             Who Are We
                         </span>
-                        <div className="flex flex-row justify-center my-5 w-full">
-                            <div className="sm:ml-10">
-                                <p className="mt-4 text-sm sm:text-3xl text-white text-start">
+                        <div className="flex flex-row justify-center items-center my-2 w-full">
+                            <div className="sm:ml-10 w-9/10 sm:w-full my-3 flex items-center text-center">
+                                <p className="text-sm sm:text-3xl sm:w-full text-white text-center">
                                     We are a digital marketing agency specializing in web development, graphics design, digital marketing, and software development. Our mission is to help businesses grow and succeed in the digital world.
                                 </p>
                             </div>
@@ -57,7 +57,7 @@ const WhoAreWe = () => {
                     </div>
                     {/* Overlay Div */}
                     <div className="relative z-10 flex items-end justify-center w-full sm:w-1/2 px-4">
-                        <div className="bg-white p-4 sm:p-8 rounded-md shadow-lg flex flex-col w-full mx-5 h-auto">
+                        <div className="bg-white p-4 sm:p-8 rounded-md shadow-lg flex flex-col w-full mx-2 sm:mx-5 h-auto">
                             <div className="relative w-full h-auto">
                                 <div className="w-full overflow-hidden h-auto">
                                     <div className="relative aspect-video md:aspect-none">
@@ -86,7 +86,7 @@ const WhoAreWe = () => {
                                         >
                                             <div className="flex flex-col justify-center items-center w-3/4">
                                                 <motion.h1
-                                                    className="text-lavender text-xl sm:text-3xl font-bold text-center"
+                                                    className="text-lavender text-md sm:text-3xl font-bold text-center"
                                                     initial={{ opacity: 0, y: '100%' }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 0.5, delay: 0.4 }}
@@ -94,7 +94,7 @@ const WhoAreWe = () => {
                                                     {imageData[currentSlide].heading}
                                                 </motion.h1>
                                                 <motion.p
-                                                    className="text-white text-sm sm:text-md font-bold text-center"
+                                                    className="text-white text-xs font-regular sm:text-md sm:font-bold text-center"
                                                     initial={{ opacity: 0, y: '100%' }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 0.5, delay: 0.6 }}
@@ -134,7 +134,7 @@ const WhoAreWe = () => {
                                     </motion.button>
                                 </div>
                             </div>
-                            <div className="text-center text-lg sm:text-2xl font-bold uppercase">
+                            <div className="text-center text-md sm:text-2xl font-bold uppercase">
                                 <h1 className="mt-5">Connect With Us Today !</h1>
                             </div>
                         </div>
