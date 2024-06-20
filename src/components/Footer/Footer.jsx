@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="container">
             <div className="f-container">
                 <span className="title">
-                    Get Funded Today!
+                    Get in Touch!
                 </span>
                 {/* <EmailBox />     */}
 

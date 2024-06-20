@@ -35,9 +35,9 @@ export default function Home() {
       })}
       viewport={{amount: 0.4}}
       >
-        <OurDiff />
+        {/* <OurDiff /> */}
       </motion.div>
-      <HowItWorks />
+      {/* <HowItWorks /> */}
 
       <motion.div
       onViewportEnter={()=> 

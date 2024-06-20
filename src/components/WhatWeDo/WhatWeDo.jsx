@@ -11,7 +11,7 @@ import { BsFillPhoneFill } from "react-icons/bs";
 
 const WhatWeDo = () => {
     return (
-        <div className="wwd-wrapper bg-platinum">
+        <div className="bg-platinum services">
             <div className="container">
                 <div className="wwd-container space-y-5">
                     {/* head of section */}
