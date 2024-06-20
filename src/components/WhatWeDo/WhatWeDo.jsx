@@ -2,229 +2,74 @@
 
 import React from 'react'
 import './WhatWeDo.css'
-import { features } from '@/src/utils/data'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { containerVariants, desVariants, tagVariants, titleVariants } from '@/src/utils/animation'
-import { FaCode } from "react-icons/fa";
-import { BsFillPhoneFill } from "react-icons/bs";
+import { FaCode, FaMobileAlt } from "react-icons/fa";
+import { BsFillMegaphoneFill } from "react-icons/bs";
 
 const WhatWeDo = () => {
     return (
-        <div className="bg-platinum services">
-            <div className="container">
-                <div className="wwd-container space-y-5">
-                    {/* head of section */}
-                    <div className="flex flex-col items-center justify-start">
-
+        <div className="bg-platinum services py-16">
+            <div className="container mx-auto px-4">
+                <div className="wwd-container space-y-12">
+                    {/* Head of section */}
+                    <div className="flex flex-col items-center justify-start text-center">
                         <motion.span
                             initial="offscreen"
                             whileInView={"onscreen"}
                             variants={tagVariants}
-                            className=''
+                            className='rounded-md bg-ultra-violet text-white text-3xl sm:text-4xl px-6 py-3 uppercase font-bold'
                         >
-                            <span className="rounded-sm flex items-center m-0 pb-0 bg-ultra-violet text-white sm:text-5xl text-2xl p-2 uppercase font-bold">
-                                What we do
-                            </span>
+                            What we do
                         </motion.span>
 
                         <motion.span
                             initial="offscreen"
                             whileInView={"onscreen"}
                             variants={titleVariants}
-                            className='title text-xs gap-0'
+                            className='title text-sm sm:text-lg mt-6'
                         >
-                            <p className="text-md leading-normal py-5">From stunning websites to impactful digital marketing, we craft solutions that elevate your brand.</p>
+                            <p className="text-gray-700 leading-relaxed max-w-2xl">
+                                From stunning websites to impactful digital marketing, we craft solutions that elevate your brand.
+                            </p>
                         </motion.span>
                     </div>
 
-                    {/* three blocks */}
-                    <div className="wwd-blocks flex justify-center w-full space-x-3">
-                        {/* first block */}
-                        <motion.div
-                            variants={desVariants}
-                            initial="offscreen"
-                            whileInView="onscreen"
-                            className="wwd-block bg-russian-violet flex"
-                        >
-
-                            <div
-                                className="flex flex-row items-center justify-center"
-                                variants={titleVariants}
-                                initial="offscreen"
-                                whileInView="onscreen"
-                            >
-                                <FaCode
-                                    className="h-20 w-20"
-                                />
-                            </div>
-
-                            <div className="flex flex-col justify-start p-2 w-full py-5">
-                                <motion.span
-                                    variants={titleVariants}
-                                    initial="offscreen"
-                                    whileInView="onscreen"
-                                    className="flex justify-start"
-                                >
-                                    <h1 className="text-platinum uppercase font-bold mt-1 leading-none text-2xl">Web Development</h1>
-                                </motion.span>
-                                <motion.span
-                                    variants={desVariants}
-                                    initial="offscreen"
-                                    whileInView="onscreen"
-                                    className="text-blacklite mt-2 flex justify-start"
-                                >
-                                    <h1 className="text-african-violet flex items-start leading-none">
-                                        Fund recurring growth expenses e.g. customer acquisition, inventory
-                                    </h1>
-                                </motion.span>
-                            </div>
-                        </motion.div>
-
-
-
-                        {/* second block */}
-
-                        <motion.div
-                            variants={desVariants}
-                            initial="offscreen"
-                            whileInView="onscreen"
-                            className="wwd-block bg-russian-violet flex"
-                        >
-
-                            <div
-                                className="flex flex-row items-center justify-center"
-                                variants={titleVariants}
-                                initial="offscreen"
-                                whileInView="onscreen"
-                            >
-                                <FaCode
-                                    className="h-20 w-20"
-                                />
-                            </div>
-
-                            <div className="flex flex-col justify-start p-2 w-full py-5">
-                                <motion.span
-                                    variants={titleVariants}
-                                    initial="offscreen"
-                                    whileInView="onscreen"
-                                    className="flex justify-start"
-                                >
-                                    <h1 className="text-platinum uppercase font-bold mt-1 leading-none text-2xl">Web Development</h1>
-                                </motion.span>
-                                <motion.span
-                                    variants={desVariants}
-                                    initial="offscreen"
-                                    whileInView="onscreen"
-                                    className="text-blacklite mt-2 flex justify-start"
-                                >
-                                    <h1 className="text-african-violet flex items-start leading-none">
-                                        Fund recurring growth expenses e.g. customer acquisition, inventory
-                                    </h1>
-                                </motion.span>
-                            </div>
-                        </motion.div>
-
-                        {/* third block */}
-                        <motion.div
-                            variants={desVariants}
-                            initial="offscreen"
-                            whileInView="onscreen"
-                            className="wwd-block bg-russian-violet flex"
-                        >
-
-                            <div
-                                className="flex flex-row items-center justify-center"
-                                variants={titleVariants}
-                                initial="offscreen"
-                                whileInView="onscreen"
-                            >
-                                <FaCode
-                                    className="h-20 w-20"
-                                />
-                            </div>
-
-                            <div className="flex flex-col justify-start p-2 w-full py-5">
-                                <motion.span
-                                    variants={titleVariants}
-                                    initial="offscreen"
-                                    whileInView="onscreen"
-                                    className="flex justify-start"
-                                >
-                                    <h1 className="text-platinum uppercase font-bold mt-1 leading-none text-2xl">Web Development</h1>
-                                </motion.span>
-                                <motion.span
-                                    variants={desVariants}
-                                    initial="offscreen"
-                                    whileInView="onscreen"
-                                    className="text-blacklite mt-2 flex justify-start"
-                                >
-                                    <h1 className="text-african-violet flex items-start leading-none">
-                                        Fund recurring growth expenses e.g. customer acquisition, inventory
-                                    </h1>
-                                </motion.span>
-                            </div>
-                        </motion.div>
-
-                        {/* <div className="wwd-block">
-                            <motion.span
-                                variants={titleVariants}
-                                initial="offscreen"
-                                whileInView={"onscreen"}
-                                className='sec-title'>
-                                Blue Seed
-                            </motion.span>
-                            <motion.span
-                                variants={desVariants}
-                                initial="offscreen"
-                                whileInView={"onscreen"}
-                                className='text'>
-                                Fund one-offs to scale e.g. product, hiring.
-                            </motion.span>
-                            <div className="block-features">
-                                {
-                                    features.slice(3, 6).map((feature, i) => (
-                                        <motion.div
-                                            initial="offscreen"
-                                            whileInView={"onscreen"}
-                                            variants={containerVariants((i + 1) * 0.1)}
-                                            className='block-feature'
-                                            key={i}>
-                                            <Image src={feature.icon} alt='feature' width={60} height={60} />
-                                            <span>{feature.title}</span>
-                                        </motion.div>
-                                    ))
-                                }
-                            </div>
-                        </div> */}
+                    {/* Three blocks */}
+                    <div className="wwd-blocks grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <ServiceBlock
+                            icon={<FaCode className="h-8 w-8" />}
+                            title="Web Development"
+                            description="Create powerful, responsive websites that drive results."
+                        />
+                        <ServiceBlock
+                            icon={<FaMobileAlt className="h-8 w-8" />}
+                            title="Mobile Development"
+                            description="Build engaging mobile experiences for your audience."
+                        />
+                        <ServiceBlock
+                            icon={<BsFillMegaphoneFill className="h-8 w-8" />}
+                            title="Digital Marketing"
+                            description="Amplify your online presence with strategic campaigns."
+                        />
                     </div>
 
-                    {/* support block */}
+                    {/* Support block */}
                     <motion.div
                         initial="offscreen"
                         whileInView={"onscreen"}
                         variants={containerVariants(0.3)}
-                        className="wwd-support">
-                        {/* left side */}
-                        <div>
-                            <span className="sec-title">
-                                Blue Growth Support
-                            </span>
-                            <span className="des">
-                                Data Insights and full stack expertise to supercharge growth
-                            </span>
-                        </div>
-
-                        {/* right side */}
-                        <div>
-                            <span className='text'>
-                                Actionable data insights by connecting revenue, marketing and social media platforms
-                            </span>
-                            <span className='text'>
-                                On demand execution expertise at cost or revenue share across proposition design
-                                engineering marketing analytics, partnerships, brand, intellectual property, market expansion,
-                                talent management.
-                            </span>
+                        className="wwd-support bg-ultra-violet text-white p-8 rounded-lg shadow-md"
+                    >
+                        <div className="flex flex-col text-russian-violet lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-8">
+                            <div className="flex-1">
+                                <h3 className="text-2xl font-bold mb-2">Blue Growth Support</h3>
+                                <p className="text-lg">Data Insights and full stack expertise to supercharge growth</p>
+                            </div>
+                            <div className="flex-1">
+                                <p>Actionable data insights by connecting revenue, marketing, and social media platforms</p>
+                                <p className="mt-2">On demand execution expertise across proposition design, engineering, marketing, analytics, and more.</p>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
@@ -232,5 +77,25 @@ const WhatWeDo = () => {
         </div>
     )
 }
+
+const ServiceBlock = ({ icon, title, description }) => (
+    <motion.div
+        variants={desVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        className="wwd-block bg-russian-violet text-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-lg"
+    >
+        <div className="flex items-center mb-4">
+            <div className="text-white mr-4 bg-ultra-violet p-3 rounded-full">
+                {icon}
+            </div>
+        </div>
+        <div className="flex flex-col">
+            <h2 className="text-xl font-bold">{title}</h2>
+            <p className="text-african-violet">{description}</p>
+
+        </div>
+    </motion.div>
+)
 
 export default WhatWeDo
