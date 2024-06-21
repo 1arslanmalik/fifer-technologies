@@ -1,16 +1,11 @@
 "use client"
 
-import Navbar from '@/src/components/Navbar/Navbar';
 import './page.css'
+import "./globals.css"
 import Hero from '@/src/components/Hero/Hero';
-import BrandingVideo from '@/src/components/BrandingVideo/BrandingVideo';
 import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
-import OurDiff from '@/src/components/OurDiff/OurDiff';
-import { motion, useAnimation } from 'framer-motion';
-import HowItWorks from '@/src/components/HowItWorks/HowItWorks';
-import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
+import { useAnimation } from 'framer-motion';
 import Testimonials from '@/src/components/Testimonials/Testimonials';
-import Footer from '@/src/components/Footer/Footer';
 import WhoAreWe from '@/src/components/WhoAreWe/WhoAreWe';
 
 export default function Home() {
@@ -18,78 +13,11 @@ export default function Home() {
   const controls = useAnimation()
 
   return (
-    <motion.div className="app home flex flex-col" animate={controls}>
-      <Navbar />
+    <div classname="flex flex-col">
       <Hero />
-      {/* <BrandingVideo /> */}
       <WhoAreWe />
       <WhatWeDo />
-      
-      {/* <HowItWorks /> */}
-
       <Testimonials />
-      <Footer />
-    </motion.div>
+    </div>
   );
 }
-// "use client"
-
-// import Navbar from '@/src/components/Navbar/Navbar';
-// import './page.css'
-// import Hero from '@/src/components/Hero/Hero';
-// import BrandingVideo from '@/src/components/BrandingVideo/BrandingVideo';
-// import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
-// import OurDiff from '@/src/components/OurDiff/OurDiff';
-// import { motion, useAnimation } from 'framer-motion';
-// import HowItWorks from '@/src/components/HowItWorks/HowItWorks';
-// import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
-// import Testimonials from '@/src/components/Testimonials/Testimonials';
-// import Footer from '@/src/components/Footer/Footer';
-// import WhoAreWe from '@/src/components/WhoAreWe/WhoAreWe';
-
-// export default function Home() {
-
-//   const controls = useAnimation()
-
-//   return (
-//     <motion.div className="app home" animate={controls}>
-//       <Navbar />
-//       <Hero />
-//       {/* <BrandingVideo /> */}
-//       <WhoAreWe />
-//       <WhatWeDo />
-      
-//       <motion.div
-//       onViewportEnter={()=> 
-//         controls.start({
-//           backgroundColor: "var(--secondary-color)",
-//         })
-//       } 
-//       onViewportLeave={()=> controls.start({
-//         backgroundColor: "white",
-//       })}
-//       viewport={{amount: 0.4}}
-//       >
-//         {/* <OurDiff /> */}
-//       </motion.div>
-//       {/* <HowItWorks /> */}
-
-//       <motion.div
-//       onViewportEnter={()=> 
-//         controls.start({
-//           backgroundColor: "var(--primary-color)",
-//         })
-//       } 
-//       onViewportLeave={()=> controls.start({
-//         backgroundColor: "white",
-//       })}
-//       viewport={{amount: 0.4}}
-//       >
-//         {/* <WhoWeInvest /> */}
-//       </motion.div>
-
-//       <Testimonials />
-//       <Footer />
-//     </motion.div>
-//   );
-// }

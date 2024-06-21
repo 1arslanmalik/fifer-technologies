@@ -6,6 +6,7 @@ import { tagVariants } from '@/src/utils/animation';
 import "./WhoAreWe.css";
 import { slider } from '../../utils/data';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const WhoAreWe = () => {
     const imageData = slider;
@@ -28,8 +29,8 @@ const WhoAreWe = () => {
 
     return (
         <div className="relative bg-gradient-to-b from-african-violet to-ultra-violet whoarewe">
-            <div className="container mx-auto px-4 h-full mt-[8rem]">
-                <div className="flex flex-col items-center justify-center h-full py-5">
+            <div className="container mx-auto px-4 h-full">
+                <div className="flex flex-col items-center justify-center h-full py-5 mt-[8rem]">
                     <motion.div
                         initial="offscreen"
                         whileInView={"onscreen"}
@@ -40,7 +41,7 @@ const WhoAreWe = () => {
                             <h2 className="text-4xl md:text-6xl font-bold text-white text-center bg-russian-violet rounded-sm pt-2 px-2">
                                 Who Are We
                             </h2>
-                            
+
                             <div className="w-full max-w-4xl">
                                 <div className="rounded-lg shadow-2xl overflow-hidden">
                                     <div className="relative h-96">
@@ -69,7 +70,7 @@ const WhoAreWe = () => {
                                                 </div>
                                             </motion.div>
                                         </AnimatePresence>
-                                        
+
                                         <div className="absolute inset-y-0 left-0 flex items-center">
                                             <button onClick={handlePrev} className="bg-black bg-opacity-50 text-white p-2 rounded-r-lg focus:outline-none hover:bg-opacity-75 transition">
                                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,13 +88,18 @@ const WhoAreWe = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="max-w-3xl text-center">
                                 <p className="text-lg md:text-xl text-white leading-relaxed">
                                     We are a digital marketing agency specializing in web development, graphics design, digital marketing, and software development. Our mission is to help businesses grow and succeed in the digital world.
                                 </p>
+                                <Link href="/about">
+                                    <h1 className="inline-block my-5 hover:text-lavender px-4 py-2 text-lg font-semibold text-white bg-black rounded-sm shadow-md hover:bg-gray-800 transition duration-300">
+                                        Read more about us
+                                    </h1>
+                                </Link>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
                                 {['Web Development', 'Digital Marketing', 'Software Solutions'].map((service, index) => (
                                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">

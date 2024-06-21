@@ -1,5 +1,9 @@
+"use client"
+import Navbar from "@/src/components/Navbar/Navbar";
 import "./globals.css";
-import {Josefin_Sans} from 'next/font/google';
+import { Josefin_Sans } from 'next/font/google';
+import { motion, useAnimation } from 'framer-motion';
+import Footer from "@/src/components/Footer/Footer";
 
 export const metadata = {
   title: "Fifer Technologies",
@@ -13,13 +17,21 @@ const Josef = Josefin_Sans({
 })
 
 export default function RootLayout({ children }) {
+  const controls = useAnimation()
+
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+        <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </head>
-      <body className={Josef.className}>{children}</body>
+      <body className={`${Josef.className}`}>
+        <motion.div className="home" animate={controls}>
+          <Navbar />
+          {children}
+          <Footer />
+        </motion.div>
+      </body>
     </html>
   );
 }

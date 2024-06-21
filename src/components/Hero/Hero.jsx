@@ -163,7 +163,7 @@ const Hero = () => {
     })
 
     return (
-        <div className="bg-blacklite flex items-center">
+        <div className="bg-blacklite flex items-center min-h-full">
             <div className="container mx-auto px-4 sm:px-6 py-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16">
                     {/* Left Side */}
