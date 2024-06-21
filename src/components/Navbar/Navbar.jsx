@@ -19,6 +19,9 @@ const Navbar = () => {
         if (route === "/about") {
             setCurrentSection("About Us")
         }
+        else if (route === "/contact") {
+            setCurrentSection("Contact Us")
+        }
         else {
             setCurrentSection("Home")
         }
@@ -29,12 +32,14 @@ const Navbar = () => {
     const router = useRouter()
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if (route !== "/about") {
-            if (latest < 0.15) {
+        if (route !== "/about" && route !== "/contact") {
+            if (latest < 0.45) {
                 setCurrentSection("Home");
-            } else if (latest >= 0.15 && latest < 0.45) {
-                setCurrentSection("About Us");
-            } else if (latest >= 0.45 && latest < 0.75) {
+            }
+            // } else if (latest >= 0.15 && latest < 0.45) {
+            //     setCurrentSection("About Us");
+            // } 
+            else if (latest >= 0.45 && latest < 0.75) {
                 setCurrentSection("Services");
             }
             else if (latest >= 0.75 && latest < 0.95) {
@@ -81,15 +86,21 @@ const Navbar = () => {
                                         <Link to="home" spy={true} smooth={true} >
                                             <span
                                                 className={`${currentSection === "Home" ? "text-white border-b-2 py-1" : "null"}`}
-                                                onClick={() => { setCurrentSection("Home") }}
+                                                onClick={() => {
+                                                    setCurrentSection("Home")
+                                                    router.push("/")
+                                                }}
                                             >
                                                 Home
                                             </span>
                                         </Link>
-                                        <Link to="whoarewe" spy smooth >
+                                        <Link href="/about" spy smooth >
                                             <span
                                                 className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
-                                                onClick={() => { setCurrentSection("About Us") }}
+                                                onClick={() => { 
+                                                    setCurrentSection("About Us") 
+                                                    router.push("/about")
+                                                }}
                                             >
                                                 About Us
                                             </span>
@@ -114,31 +125,35 @@ const Navbar = () => {
                                         <Link to="" spy smooth offset={100} >
                                             <span
                                                 className={`${currentSection === "Contact Us" ? "text-white border-b-2 py-1" : "null"}`}
-                                                onClick={() => { setCurrentSection("Contact Us") }}
+                                                onClick={() => {
+                                                    setCurrentSection("Contact Us")
+                                                    router.push("/contact")
+                                                }
+                                                }
                                             >
                                                 Contact Us
                                             </span>
                                         </Link>
                                         <div className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center">
-                            <button>Get Started</button>
-                        </div>
+                                            <button>Get Started</button>
+                                        </div>
                                     </>
-                                    
+
                                 )
                                     :
                                     (
                                         <div className="flex items-center justify-center py-2 px-4 underline">
 
                                             <Link to="whoarewe" spy smooth className="underline flex items-center justify-center hover:bg-african-violet hover:bg-opacity-10 transition-colors duration-300">
-                                            <FaArrowLeft className="mr-2 text-xl underline" />
+                                                <FaArrowLeft className="mr-2 text-xl underline" />
 
                                                 <span
                                                     className="text-white font-semibold text-lg"
                                                     onClick={() => { router.push("/") }}
-                                                    >
+                                                >
                                                     Return Home
                                                 </span>
-                                                    {/* <FaHome className=" m-2 mb-3 text-xl" /> */}
+                                                {/* <FaHome className=" m-2 mb-3 text-xl" /> */}
                                             </Link>
                                         </div>
                                     )

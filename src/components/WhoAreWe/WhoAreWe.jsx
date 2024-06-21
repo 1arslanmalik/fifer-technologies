@@ -93,11 +93,11 @@ const WhoAreWe = () => {
                                 <p className="text-lg md:text-xl text-white leading-relaxed">
                                     We are a digital marketing agency specializing in web development, graphics design, digital marketing, and software development. Our mission is to help businesses grow and succeed in the digital world.
                                 </p>
-                                <Link href="/about">
+                                {/* <Link href="/about">
                                     <h1 className="inline-block my-5 hover:text-lavender px-4 py-2 text-lg font-semibold text-white bg-black rounded-sm shadow-md hover:bg-gray-800 transition duration-300">
                                         Read more about us
                                     </h1>
-                                </Link>
+                                </Link> */}
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
