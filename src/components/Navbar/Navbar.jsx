@@ -10,18 +10,28 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const Navbar = () => {
+    const locations = ["Home", "Services", "Testimonials"]
     const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
     const [navStyle, setNavStyle] = useState("");
     const { scrollYProgress } = useScroll();
     const [currentSection, setCurrentSection] = useState("Home");
 
-    // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    //     if (latest > 0.15 || latest > 0.20) {
-    //         setNavStyle("sticky");
-    //     } else {
-    //         setNavStyle("");
-    //     }
-    // });
+
+    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+        if (latest < 0.15) {
+            setCurrentSection("Home");
+        } else if (latest >= 0.15 && latest < 0.45) {
+            setCurrentSection("About Us");
+        } else if(latest >= 0.45 && latest < 0.75){
+            setCurrentSection("Services");
+        }
+        else if(latest >= 0.75 && latest < 0.95){
+            setCurrentSection("Testimonials");
+        }
+        else{
+            setCurrentSection(null)
+        }
+    });
 
     return (
         <div className={`n-wrapper ${navStyle} sticky bg-russian-violet`}>
@@ -60,14 +70,14 @@ const Navbar = () => {
                                     Home
                                 </span>
                             </Link>
-                            {/* <Link to="whoarewe" spy smooth offset={100} >
+                            <Link to="whoarewe" spy smooth >
                                 <span
                                     className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
                                     onClick={() => { setCurrentSection("About Us") }}
                                 >
                                     About Us
                                 </span>
-                            </Link> */}
+                            </Link>
                             <Link to="services" spy smooth >
                                 <span
                                     className={`${currentSection === "Services" ? "text-white border-b-2 py-1" : "null"}`}
@@ -78,7 +88,7 @@ const Navbar = () => {
                                 {/* dropdown here */}
                             </Link>
                             <Link to="t-wrapper" spy smooth offset={100} >
-                                                                <span
+                                <span
                                     className={`${currentSection === "Testimonials" ? "text-white border-b-2 py-1" : "null"}`}
                                     onClick={() => { setCurrentSection("Testimonials") }}
                                 >
@@ -86,7 +96,7 @@ const Navbar = () => {
                                 </span>
                             </Link>
                             <Link to="" spy smooth offset={100} >
-                            <span
+                                <span
                                     className={`${currentSection === "Contact Us" ? "text-white border-b-2 py-1" : "null"}`}
                                     onClick={() => { setCurrentSection("Contact Us") }}
                                 >

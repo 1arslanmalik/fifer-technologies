@@ -2,6 +2,7 @@ import { testimonialsData } from '@/src/utils/data'
 import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick'
+import "./SlickSlider.css"
 
 const SlickSlider = () => {
     const settings = {
@@ -12,6 +13,7 @@ const SlickSlider = () => {
         slidesToScroll: 1,
         initialSlide: 0,
         touchMove: true,
+        swipe: true,
         useCSS: true,
         responsive: [
             {
@@ -40,6 +42,7 @@ const SlickSlider = () => {
             },
         ]
     }
+
   return (
     <div>
         <Slider {...settings}>

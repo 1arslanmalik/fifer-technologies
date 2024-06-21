@@ -18,7 +18,7 @@ export default function Home() {
   const controls = useAnimation()
 
   return (
-    <motion.div className="app home" animate={controls}>
+    <motion.div className="app home flex flex-col" animate={controls}>
       <Navbar />
       <Hero />
       {/* <BrandingVideo /> */}

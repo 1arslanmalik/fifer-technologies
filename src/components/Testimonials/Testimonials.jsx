@@ -2,141 +2,59 @@ import './Testimonials.css'
 import React from 'react'
 import SlickSlider from './SlickSlider'
 import { motion } from 'framer-motion'
-import { FaQuoteLeft, FaQuoteRight, FaStar, FaUserCircle } from 'react-icons/fa'
+import { FaStar, FaUserCircle, FaQuoteLeft } from 'react-icons/fa'
 
 const Testimonials = () => {
   return (
-    <div className="t-wrapper">
-      <div className="container">
-        <div className="t-container">
-          <div className="flex justify-center flex-col items-center space-y-10 mt-5">
-            <h1 className='text-4xl text-bold bg-russian-violet text-white rounded-sm px-3 pt-1'>Testimonials</h1>
-            <span className='title'>Access capital that complements traditional funding options.</span>
-            <span className='des'>What people say about us -</span>
-          </div>
-        </div>
-        {/* {ratings and icons} */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-8 ">
+    <div className="t-wrapper bg-gradient-to-b from-gray-100 to-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="t-container text-center">
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center w-full md:w-1/4"
-            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col items-center space-y-6"
           >
-            <FaStar className="text-4xl text-blue-500 mb-2" />
-            <span className="text-2xl font-bold text-gray-900">4.9</span>
+            <FaQuoteLeft className="text-5xl text-russian-violet opacity-20" />
+            <h1 className='text-3xl md:text-4xl font-bold text-russian-violet'>
+              Testimonials
+            </h1>
+            <p className='text-lg md:text-xl text-gray-600 max-w-2xl'>
+              Access capital that complements traditional funding options.
+            </p>
+            <span className='text-sm uppercase tracking-wider text-gray-500'>
+              What people say about us
+            </span>
+          </motion.div>
+        </div>
+
+        {/* ratings and icons */}
+        <div className="flex flex-col sm:flex-row justify-center items-stretch gap-6 mt-12">
+          <motion.div
+            className="p-6 bg-white hover:bg-ultra-violet hover:text-white rounded-lg shadow-lg flex flex-col items-center justify-center flex-1 min-h-[200px] transition-all duration-300 hover:shadow-xl"
+            whileHover={{ scale: 1.03 }}
+          >
+            <FaStar className="text-5xl text-yellow-400 mb-4" />
+            <span className="text-3xl font-bold text-gray-900 mb-2">4.9</span>
             <span className="text-sm text-gray-600">Average Rating</span>
           </motion.div>
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center w-full md:w-1/4"
-            whileHover={{ scale: 1.05 }}
+            className="bg-white hover:bg-ultra-violet hover:text-white   p-6 rounded-lg shadow-lg flex flex-col items-center justify-center flex-1 min-h-[200px] transition-all duration-300 hover:shadow-xl"
+            whileHover={{ scale: 1.03 }}
           >
-            <FaUserCircle className="text-4xl text-blue-500 mb-2" />
-            <span className="text-2xl font-bold text-gray-900">10k+</span>
+            <FaUserCircle className="text-5xl text-blue-500 mb-4" />
+            <span className="text-3xl font-bold text-gray-900 mb-2">10k+</span>
             <span className="text-sm text-gray-600">Happy Clients</span>
           </motion.div>
         </div>
 
         {/* slider */}
-        <SlickSlider />
+        <div className="mt-16">
+          <SlickSlider />
+        </div>
       </div>
     </div>
   )
 }
 
-
 export default Testimonials
-
-
-// export default Testimonials
-// import React from 'react'
-// import SlickSlider from './SlickSlider'
-// import './Testimonials.css'
-
-// const Testimonials = () => {
-//   return (
-//     <div className="t-wrapper">
-//         <div className="container">
-//             <div className="t-container">
-//                 <div className="t-head">
-//                     <span className='tag'>Testimonials</span>
-//                     <span className='title'>Access capital that complements traditional funding options.</span>
-//                     <span className='des'>What people say about us</span>
-//                 </div>
-//             </div>
-//             {/* slider */}
-//             <SlickSlider/>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Testimonials
-
-
-
-
-
-// import React from 'react'
-// import SlickSlider from './SlickSlider'
-// import { motion } from 'framer-motion'
-// import { FaQuoteLeft, FaQuoteRight, FaStar, FaUserCircle } from 'react-icons/fa'
-// import { BsPeople } from 'react-icons/bs'
-// import Slider from 'react-slick/lib/slider'
-
-// const Testimonials = () => {
-//   return (
-//     <motion.div
-//       className="bg-gray-50 py-16 relative overflow-hidden"
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       transition={{ duration: 0.5 }}
-//     >
-//       <div className="flex flex-col container mx-auto px-4">
-//         <motion.div
-//           className="text-center mb-12"
-//           initial={{ y: -50 }}
-//           animate={{ y: 0 }}
-//           transition={{ duration: 0.5, delay: 0.2 }}
-//         >
-//           <span className='inline-flex items-center bg-gray-200 px-4 py-2 rounded-full font-bold text-gray-700 mb-4'>
-//             <FaQuoteLeft className="mr-2" />
-//             Testimonials
-//             <FaQuoteRight className="ml-2" />
-//           </span>
-//           <h2 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>Access capital that complements traditional funding options.</h2>
-//           <p className='text-xl text-gray-600 flex items-center justify-center'>
-//             <BsPeople className="mr-2" />
-//             What people say about us
-//           </p>
-//         </motion.div>
-
-// <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-8">
-//   <motion.div
-//     className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center w-full md:w-1/4"
-//     whileHover={{ scale: 1.05 }}
-//   >
-//     <FaStar className="text-4xl text-blue-500 mb-2" />
-//     <span className="text-2xl font-bold text-gray-900">4.9</span>
-//     <span className="text-sm text-gray-600">Average Rating</span>
-//   </motion.div>
-//   <motion.div
-//     className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center w-full md:w-1/4"
-//     whileHover={{ scale: 1.05 }}
-//   >
-//     <FaUserCircle className="text-4xl text-blue-500 mb-2" />
-//     <span className="text-2xl font-bold text-gray-900">10k+</span>
-//     <span className="text-sm text-gray-600">Happy Clients</span>
-//   </motion.div>
-// </div>
-//         {/* <motion.div
-//           className="absolute bottom-0 left-0 right-0 bg-blue-500 opacity-10 h-1/2"
-//           initial={{ height: 0 }}
-//           animate={{ height: '50%' }}
-//           transition={{ duration: 0.8, delay: 0.6 }}
-//         /> */}
-//       </div>
-//       <SlickSlider />
-//     </motion.div>
-//   )
-// }
-
-// export default Testimonials

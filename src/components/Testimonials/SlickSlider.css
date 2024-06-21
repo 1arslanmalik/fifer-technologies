@@ -1,0 +1,39 @@
+.comment {
+    padding: 20px;
+    background: #f9f9f9;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.c-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.apos-slider {
+    margin-right: 10px;
+}
+
+.c-info {
+    display: flex;
+    align-items: center;
+}
+
+.c-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.c-person span {
+    display: block;
+    font-size: 0.9em;
+}
