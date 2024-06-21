@@ -217,7 +217,7 @@ const Hero = () => {
                     <div className="w-full lg:w-1/2 order-1 lg:order-2 flex flex-col items-center lg:items-start">
                         <div className="flex flex-col text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold space-y-2 sm:space-y-3 lg:space-y-5 w-full lg:w-3/4 h-title mb-6 sm:mb-8 text-center lg:text-left">
                             <span className="text-white">Leverage Your</span>
-                            <div className="uppercase text-white bg-ultra-violet pt-1 sm:pt-2 px-2 flex sm:text-start ms-center">
+                            <div className="uppercase text-white bg-ultra-violet pt-1 sm:pt-2 px-2 flex sm:text-start ms-center truncate">
                                 <span className="pt-1">Digital Business</span>
                             </div>
                             <span className="text-white">Today!</span>
