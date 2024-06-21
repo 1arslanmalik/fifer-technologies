@@ -59,6 +59,7 @@ export const slider = [
   },
 ]
 
+
 export const features = [
   {
     icon: "/features/Frame-0.png",

@@ -60,15 +60,15 @@ const Navbar = () => {
                                     Home
                                 </span>
                             </Link>
-                            <Link to="whoarewe" spy smooth offset={100} >
+                            {/* <Link to="whoarewe" spy smooth offset={100} >
                                 <span
                                     className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
                                     onClick={() => { setCurrentSection("About Us") }}
                                 >
                                     About Us
                                 </span>
-                            </Link>
-                            <Link to="wwi-wrapper" spy smooth >
+                            </Link> */}
+                            <Link to="services" spy smooth >
                                 <span
                                     className={`${currentSection === "Services" ? "text-white border-b-2 py-1" : "null"}`}
                                     onClick={() => { setCurrentSection("Services") }}
