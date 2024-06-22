@@ -70,7 +70,7 @@ export async function POST(req, res) {
     const { data, error } = await resend.emails.send({
       from: 'Fifer Technologies <onboarding@resend.dev>',
       to: [process.env.ADMIN_EMAIL],
-      subject: 'New User Message',
+      subject: 'New Message From Client',
       react: EmailTemplate({ name: userName , email: userEmail, message: userMessage}),
     });
 

@@ -1,4 +1,5 @@
 import { Html, Heading, Text } from "@react-email/components"
+
 const EmailTemplate = ({
   name,
   email,
@@ -7,10 +8,17 @@ const EmailTemplate = ({
   return (
     <Html lang="en">
       <Heading as="h1">Fifer Technologies</Heading>
-      <Text><b>Name: </b>{name}</Text>
-      <Text><b>Email: </b>{email}</Text>
-      <Text><b>Message: </b>{message}</Text>
+      <Text>
+        <span style={{ fontWeight: 'bold' }}>Name: </span>{name}
+      </Text>
+      <Text>
+        <span style={{ fontWeight: 'bold' }}>Email: </span>{email}
+      </Text>
+      <Text>
+        <span style={{ fontWeight: 'bold' }}>Message: </span>{message}
+      </Text>
     </Html>
   )
 }
+
 export default EmailTemplate
