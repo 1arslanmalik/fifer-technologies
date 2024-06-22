@@ -1,8 +1,6 @@
-"use client"
 import Navbar from "../src/components/Navbar/Navbar.jsx";
 import "./globals.css";
 import { Josefin_Sans } from 'next/font/google';
-import { motion, useAnimation } from 'framer-motion';
 import Footer from "../src/components/Footer/Footer.jsx";
 
 export const metadata = {
@@ -17,8 +15,6 @@ const Josef = Josefin_Sans({
 })
 
 export default function RootLayout({ children }) {
-  const controls = useAnimation()
-
   return (
     <html lang="en">
       <head>
@@ -26,11 +22,11 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </head>
       <body className={`${Josef.className}`}>
-        <motion.div className="home" animate={controls}>
+        <div className="home">
           <Navbar />
           {children}
           <Footer />
-        </motion.div>
+        </div>
       </body>
     </html>
   );

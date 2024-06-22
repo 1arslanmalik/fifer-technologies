@@ -10,7 +10,7 @@ import WhoAreWe from '../src/components/WhoAreWe/WhoAreWe.jsx';
 
 export default function Home() {
 
-  const controls = useAnimation()
+  // const controls = useAnimation()
 
   return (
     <div className="flex flex-col">

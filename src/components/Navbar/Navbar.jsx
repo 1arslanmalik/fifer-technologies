@@ -22,34 +22,38 @@ const Navbar = () => {
         else if (route === "/contact") {
             setCurrentSection("Contact Us")
         }
+        else if (route === "/services"){
+            setCurrentSection("Services")
+        }
         else {
             setCurrentSection("Home")
         }
     }, [route])
+
     const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
-    const { scrollYProgress } = useScroll();
-    const [currentSection, setCurrentSection] = useState("");
+    // const { scrollYProgress } = useScroll();
+    const [currentSection, setCurrentSection] = useState("Home");
     const router = useRouter()
 
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if (route !== "/about" && route !== "/contact") {
-            if (latest < 0.45) {
-                setCurrentSection("Home");
-            }
-            // } else if (latest >= 0.15 && latest < 0.45) {
-            //     setCurrentSection("About Us");
-            // } 
-            else if (latest >= 0.45 && latest < 0.75) {
-                setCurrentSection("Services");
-            }
-            else if (latest >= 0.75 && latest < 0.95) {
-                setCurrentSection("Testimonials");
-            }
-            else {
-                setCurrentSection(null)
-            }
-        }
-    });
+    // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    //     if (route !== "/about" && route !== "/contact") {
+    //         if (latest < 0.45) {
+    //             setCurrentSection("Home");
+    //         }
+    //         // } else if (latest >= 0.15 && latest < 0.45) {
+    //         //     setCurrentSection("About Us");
+    //         // } 
+    //         else if (latest >= 0.45 && latest < 0.75) {
+    //             setCurrentSection("Services");
+    //         }
+    //         else if (latest >= 0.75 && latest < 0.95) {
+    //             setCurrentSection("Testimonials");
+    //         }
+    //         else {
+    //             setCurrentSection(null)
+    //         }
+    //     }
+    // });
 
     return (
         <div className={`n-wrapper sticky bg-russian-violet`}>
@@ -83,7 +87,7 @@ const Navbar = () => {
                             {
                                 // route !== "/about" ? (
                                     <>
-                                        <Link to="home" spy={true} smooth={true} >
+                                        <div>
                                             <span
                                                 className={`${currentSection === "Home" ? "text-white border-b-2 py-1" : "null"}`}
                                                 onClick={() => {
@@ -93,8 +97,8 @@ const Navbar = () => {
                                             >
                                                 Home
                                             </span>
-                                        </Link>
-                                        <Link href="/about" spy smooth >
+                                        </div>
+                                        <div>
                                             <span
                                                 className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
                                                 onClick={() => { 
@@ -104,8 +108,8 @@ const Navbar = () => {
                                             >
                                                 About Us
                                             </span>
-                                        </Link>
-                                        <Link to="services" spy smooth >
+                                        </div>
+                                        <div>
                                             <span
                                                 className={`${currentSection === "Services" ? "text-white border-b-2 py-1" : "null"}`}
                                                 onClick={() => { 
@@ -116,7 +120,7 @@ const Navbar = () => {
                                                 Services
                                             </span>
                                             {/* dropdown here */}
-                                        </Link>
+                                        </div>
                                         {/* <Link to="t-wrapper" spy smooth offset={100} >
                                             <span
                                                 className={`${currentSection === "Testimonials" ? "text-white border-b-2 py-1" : "null"}`}
@@ -125,7 +129,7 @@ const Navbar = () => {
                                                 Testimonials
                                             </span>
                                         </Link> */}
-                                        <Link to="" spy smooth offset={100} >
+                                        <div>
                                             <span
                                                 className={`${currentSection === "Contact Us" ? "text-white border-b-2 py-1" : "null"}`}
                                                 onClick={() => {
@@ -136,7 +140,7 @@ const Navbar = () => {
                                             >
                                                 Contact Us
                                             </span>
-                                        </Link>
+                                        </div>
                                         <div className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center">
                                             <button>Get Started</button>
                                         </div>
