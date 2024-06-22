@@ -3,7 +3,7 @@
 import React from 'react'
 import './WhatWeDo.css'
 import { motion } from 'framer-motion'
-import { containerVariants, desVariants, tagVariants, titleVariants } from '@/src/utils/animation'
+import { containerVariants, desVariants, tagVariants, titleVariants } from '../../utils/animation'
 import { FaCode, FaMobileAlt } from "react-icons/fa";
 import { BsFillMegaphoneFill } from "react-icons/bs";
 

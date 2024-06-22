@@ -44,6 +44,8 @@ const Navbar = () => {
 
 
     return (
+        // locationa and email
+
         <div className={`sticky bg-russian-violet`}>
             <div className="flex flex-col md:flex-row justify-evenly bg-ultra-violet bg-opacity-20">
                 <div className="h-full flex items-center w-full md:w-screen justify-evenly py-2">
@@ -61,22 +63,23 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+
             {/* desktop version */}
-            <div className="container">
-                <div className="n-container">
+            <div className="uppercase px-5 py-1">
+                <div className="n-container w-full">
                     {/* left side */}
-                    <div className="n-logo">
+                    <div className="n-logo w-full">
                         <span className="text-3xl text-white">FIFER TECHNOLOGIES</span>
                     </div>
 
                     {/* right side */}
-                    <div className="n-right">
-                        <div className="n-menu">
+                    <div className="w-full text-sm">
+                        <div className="flex justify-end items-center space-x-12 w-full">
                             {
                                 <>
-                                    <div>
+                                    <button className='uppercase'>
                                         <span
-                                            className={`${currentSection === "Home" ? "text-white border-b-2 py-1" : "null"}`}
+                                            className={`${currentSection === "Home" ? "text-white border-b-2 py-1 text-sm" : "null"}`}
                                             onClick={() => {
                                                 setCurrentSection("Home")
                                                 router.push("/")
@@ -84,8 +87,8 @@ const Navbar = () => {
                                         >
                                             Home
                                         </span>
-                                    </div>
-                                    <div>
+                                    </button>
+                                    <button className='uppercase'>
                                         <span
                                             className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
                                             onClick={() => {
@@ -95,8 +98,8 @@ const Navbar = () => {
                                         >
                                             About Us
                                         </span>
-                                    </div>
-                                    <div>
+                                    </button>
+                                    <button className='uppercase'>
                                         <span
                                             className={`${currentSection === "Services" ? "text-white border-b-2 py-1" : "null"}`}
                                             onClick={() => {
@@ -106,8 +109,8 @@ const Navbar = () => {
                                         >
                                             Services
                                         </span>
-                                    </div>
-                                    <div>
+                                    </button>
+                                    <button className='uppercase'>
                                         <span
                                             className={`${currentSection === "Contact Us" ? "text-white border-b-2 py-1" : "null"}`}
                                             onClick={() => {
@@ -118,9 +121,9 @@ const Navbar = () => {
                                         >
                                             Contact Us
                                         </span>
-                                    </div>
+                                    </button>
                                     <div className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center">
-                                        <button>Get Started</button>
+                                        <button className=''>Get Started</button>
                                     </div>
                                 </>
                             }
@@ -150,6 +153,7 @@ const Navbar = () => {
                             />
                         </div>
                 }
+                
                 {/* Mobile menu */}
                 <div
                     className={`

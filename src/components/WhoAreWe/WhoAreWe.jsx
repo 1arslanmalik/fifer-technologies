@@ -2,11 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { tagVariants } from '@/src/utils/animation';
+import { tagVariants } from '../../utils/animation';
 import "./WhoAreWe.css";
 import { slider } from '../../utils/data';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const WhoAreWe = () => {
     const imageData = slider;

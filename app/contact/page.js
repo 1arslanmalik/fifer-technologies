@@ -83,6 +83,7 @@ const ContactUs = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="lg:w-1/2"
           >
+            
             <form onSubmit={handleSubmit} className="bg-blacklite bg-opacity-70 rounded-xl p-8 shadow-2xl">
               <div className="mb-6">
                 <label htmlFor="name" className="block text-lilac mb-2">Name</label>

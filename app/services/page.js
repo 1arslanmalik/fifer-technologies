@@ -2,7 +2,6 @@
 
 import "../page.css"
 import { useState } from 'react';
-import Image from 'next/image';
 import { FaRocket, FaChartLine, FaCogs, FaMobile, FaPalette, FaLaptopCode } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -38,7 +37,6 @@ const Services = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-blacklite bg-opacity-70 rounded-xl p-6 cursor-pointer hover:shadow-2xl transition-all duration-300"
-            //   onClick={() => setActiveService(service)}
             >
               <service.icon className="text-lilac text-4xl mb-4" />
               <h3 className="text-2xl font-bold text-platinum mb-2">{service.title}</h3>
@@ -57,27 +55,6 @@ const Services = () => {
               className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
               onClick={() => setActiveService(null)}
             >
-              {/* <motion.div
-                className="bg-russian-violet rounded-xl p-8 max-w-3xl w-full mt-[8rem]"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <h2 className="text-3xl font-bold text-lilac mb-4">{activeService.title}</h2>
-                <Image
-                  src={activeService.image}
-                  alt={activeService.title}
-                  width={600}
-                  height={400}
-                  objectFit="cover"
-                  className="rounded-lg mb-4"
-                />
-                <p className="text-platinum mb-4">{activeService.description}</p>
-                <button
-                  onClick={() => setActiveService(null)}
-                  className="bg-lilac text-russian-violet px-4 py-2 rounded-full hover:bg-lavender transition-colors duration-300"
-                >
-                  Close
-                </button>
-              </motion.div> */}
             </motion.div>
           )}
         </AnimatePresence>
