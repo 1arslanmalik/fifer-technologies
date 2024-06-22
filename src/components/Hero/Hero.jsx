@@ -167,7 +167,7 @@ const Hero = () => {
             <div className="container mx-auto px-4 sm:px-6 py-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16">
                     {/* Left Side */}
-                    <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+                    <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-between">
                         <div className="flex justify-center lg:justify-start">
                             <div className="image-row mt-4 lg:mt-8">
                                 {HeroData.slice(0, 3).map((person, i) => (
