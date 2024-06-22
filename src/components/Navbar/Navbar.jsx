@@ -81,7 +81,7 @@ const Navbar = () => {
                     <div className="n-right">
                         <div className="n-menu">
                             {
-                                route !== "/about" ? (
+                                // route !== "/about" ? (
                                     <>
                                         <Link to="home" spy={true} smooth={true} >
                                             <span
@@ -108,20 +108,23 @@ const Navbar = () => {
                                         <Link to="services" spy smooth >
                                             <span
                                                 className={`${currentSection === "Services" ? "text-white border-b-2 py-1" : "null"}`}
-                                                onClick={() => { setCurrentSection("Services") }}
+                                                onClick={() => { 
+                                                    setCurrentSection("Services") 
+                                                    router.push("/services")
+                                                }}
                                             >
                                                 Services
                                             </span>
                                             {/* dropdown here */}
                                         </Link>
-                                        <Link to="t-wrapper" spy smooth offset={100} >
+                                        {/* <Link to="t-wrapper" spy smooth offset={100} >
                                             <span
                                                 className={`${currentSection === "Testimonials" ? "text-white border-b-2 py-1" : "null"}`}
                                                 onClick={() => { setCurrentSection("Testimonials") }}
                                             >
                                                 Testimonials
                                             </span>
-                                        </Link>
+                                        </Link> */}
                                         <Link to="" spy smooth offset={100} >
                                             <span
                                                 className={`${currentSection === "Contact Us" ? "text-white border-b-2 py-1" : "null"}`}
@@ -139,24 +142,24 @@ const Navbar = () => {
                                         </div>
                                     </>
 
-                                )
-                                    :
-                                    (
-                                        <div className="flex items-center justify-center py-2 px-4 underline">
+                                // )
+                                    // :
+                                    // (
+                                    //     <div className="flex items-center justify-center py-2 px-4 underline">
 
-                                            <Link to="whoarewe" spy smooth className="underline flex items-center justify-center hover:bg-african-violet hover:bg-opacity-10 transition-colors duration-300">
-                                                <FaArrowLeft className="mr-2 text-xl underline" />
+                                    //         <Link to="whoarewe" spy smooth className="underline flex items-center justify-center hover:bg-african-violet hover:bg-opacity-10 transition-colors duration-300">
+                                    //             <FaArrowLeft className="mr-2 text-xl underline" />
 
-                                                <span
-                                                    className="text-white font-semibold text-lg"
-                                                    onClick={() => { router.push("/") }}
-                                                >
-                                                    Return Home
-                                                </span>
-                                                {/* <FaHome className=" m-2 mb-3 text-xl" /> */}
-                                            </Link>
-                                        </div>
-                                    )
+                                    //             <span
+                                    //                 className="text-white font-semibold text-lg"
+                                    //                 onClick={() => { router.push("/") }}
+                                    //             >
+                                    //                 Return Home
+                                    //             </span>
+                                    //             {/* <FaHome className=" m-2 mb-3 text-xl" /> */}
+                                    //         </Link>
+                                    //     </div>
+                                    // )
                             }
                         </div>
                     </div>

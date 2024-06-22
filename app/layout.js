@@ -1,9 +1,9 @@
 "use client"
-import Navbar from "@/src/components/Navbar/Navbar";
+import Navbar from "../src/components/Navbar/Navbar.jsx";
 import "./globals.css";
 import { Josefin_Sans } from 'next/font/google';
 import { motion, useAnimation } from 'framer-motion';
-import Footer from "@/src/components/Footer/Footer";
+import Footer from "../src/components/Footer/Footer.jsx";
 
 export const metadata = {
   title: "Fifer Technologies",

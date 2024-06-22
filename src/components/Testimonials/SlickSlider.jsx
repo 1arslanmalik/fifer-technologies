@@ -1,4 +1,4 @@
-import { testimonialsData } from '@/src/utils/data'
+import { testimonialsData } from '../../utils/data'
 import Image from 'next/image'
 import React from 'react'
 import Slider from 'react-slick'

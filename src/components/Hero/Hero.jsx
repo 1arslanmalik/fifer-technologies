@@ -132,7 +132,7 @@
 
 import React from 'react'
 import './Hero.css'
-import { HeroData } from '@/src/utils/data'
+import { HeroData } from '../../utils/data'
 import { motion } from 'framer-motion'
 import { FaRocket, FaChartLine, FaUsers } from 'react-icons/fa'
 

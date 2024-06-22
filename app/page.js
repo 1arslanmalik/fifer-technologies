@@ -2,18 +2,18 @@
 
 import './page.css'
 import "./globals.css"
-import Hero from '@/src/components/Hero/Hero';
-import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
+import Hero from '../src/components/Hero/Hero.jsx';
+import WhatWeDo from '../src/components/WhatWeDo/WhatWeDo.jsx';
 import { useAnimation } from 'framer-motion';
-import Testimonials from '@/src/components/Testimonials/Testimonials';
-import WhoAreWe from '@/src/components/WhoAreWe/WhoAreWe';
+import Testimonials from '../src/components/Testimonials/Testimonials.jsx';
+import WhoAreWe from '../src/components/WhoAreWe/WhoAreWe.jsx';
 
 export default function Home() {
 
   const controls = useAnimation()
 
   return (
-    <div classname="flex flex-col">
+    <div className="flex flex-col">
       <Hero />
       <WhoAreWe />
       <WhatWeDo />
