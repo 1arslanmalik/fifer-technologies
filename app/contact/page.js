@@ -56,7 +56,7 @@ const ContactUs = () => {
 
   return (
     <section className="bg-gradient-to-br from-russian-violet via-ultra-violet to-african-violet min-h-screen py-12">
-      <div className="container mx-auto px-4 flex flex-col items-between">
+      <div className="container mx-auto px-4 max-w-6xl flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,12 +66,12 @@ const ContactUs = () => {
           Get in Touch
         </motion.h1>
 
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-12 justify-center w-full">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 max-w-md"
           >
             <h2 className="text-3xl font-bold text-lilac mb-6">Contact Information</h2>
             <div className="space-y-4">
@@ -118,7 +118,7 @@ const ContactUs = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 max-w-md"
           >
             {!uploadClicked ? (
               <form onSubmit={handleSubmit} className="bg-blacklite bg-opacity-70 rounded-xl p-8 shadow-2xl">
@@ -190,59 +190,57 @@ const ContactUs = () => {
                   <h2 className="text-2xl font-bold text-lilac mb-4">Thank You!</h2>
                   <p className="text-platinum">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </motion.div>
-              )
-                :
-                (
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-gradient-to-br from-blacklite to-purple-900 bg-opacity-70 rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl text-center max-w-lg mx-auto w-full overflow-hidden relative"
+                >
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-gradient-to-br from-blacklite to-purple-900 bg-opacity-70 rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl text-center max-w-lg mx-auto w-full overflow-hidden relative"
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+                    className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                   >
-                    <motion.div
-                      initial={{ y: -100, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
-                      className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                    >
-                      <RiSignalWifiErrorFill className="text-red-500 text-6xl sm:text-7xl md:text-8xl" />
-                    </motion.div>
-
-                    <motion.h1
-                      className="text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 mt-12 text-white font-bold"
-                      initial={{ y: 20, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.4 }}
-                    >
-                      Too Many Requests
-                    </motion.h1>
-
-                    <motion.p
-                      className="text-lg sm:text-xl text-gray-300 mb-8"
-                      initial={{ y: 20, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.6 }}
-                    >
-                      Our servers are taking a quick breather. Please try again later.
-                    </motion.p>
-
-                    <motion.button
-                      className="bg-lavender text-russian-violet rounded-full px-6 py-3 text-lg sm:text-xl flex items-center justify-center mx-auto hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <IoMdHome className="mr-2" />
-                      Return Home
-                    </motion.button>
-
-                    <motion.div
-                      className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{ delay: 0.8, duration: 0.8 }}
-                    />
+                    <RiSignalWifiErrorFill className="text-red-500 text-6xl sm:text-7xl md:text-8xl" />
                   </motion.div>
-                )
+
+                  <motion.h1
+                    className="text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 mt-12 text-white font-bold"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    Too Many Requests
+                  </motion.h1>
+
+                  <motion.p
+                    className="text-lg sm:text-xl text-gray-300 mb-8"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    Our servers are taking a quick breather. Please try again later.
+                  </motion.p>
+
+                  <motion.button
+                    className="bg-lavender text-russian-violet rounded-full px-6 py-3 text-lg sm:text-xl flex items-center justify-center mx-auto hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <IoMdHome className="mr-2" />
+                    Return Home
+                  </motion.button>
+
+                  <motion.div
+                    className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ delay: 0.8, duration: 0.8 }}
+                  />
+                </motion.div>
+              )
             )}
           </motion.div>
         </div>
