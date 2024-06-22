@@ -4,6 +4,7 @@ import "../page.css"
 import { useState } from 'react';
 import { FaRocket, FaChartLine, FaCogs, FaMobile, FaPalette, FaLaptopCode } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from "next/link";
 
 const Services = () => {
   const [activeService, setActiveService] = useState(null);
@@ -63,16 +64,15 @@ const Services = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-16 text-center"
+          className="mt-16 text-center py-5"
         >
           <p className="text-platinum text-2xl mb-6">Ready to transform your digital presence?</p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Link
+            href={"/contact"}
             className="bg-gradient-to-r from-lilac to-lavender text-russian-violet font-bold px-8 py-3 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Let&apos;s Get Started
-          </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
