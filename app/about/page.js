@@ -5,8 +5,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { FaRocket, FaChartLine, FaCogs, FaLightbulb, FaUsers, FaCode } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from "next/navigation";
 
 const AboutUs = () => {
+  const router = useRouter()
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -42,15 +44,6 @@ const AboutUs = () => {
 
   return (
     <section className="bg-gradient-to-br flex flex-col from-russian-violet via-ultra-violet py-12 to-african-violet space-y-10">
-
-      {/* <div className="self-center flex items-center bg-blacklite bg-opacity-70 shadow-2xl overflow-hidden backdrop-filter backdrop-blur-lg">
-
-      <h1 
-          className="text-4xl w-screen sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text text-lavender text-center py-10"
-        >
-          ABOUT US
-        </h1>
-      </div> */}
       <div className="container mx-auto px-4">
 
         <motion.h2 
@@ -133,6 +126,7 @@ const AboutUs = () => {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={()=>router.push("/contact")}
             className="bg-gradient-to-r py-3 leading-10 from-lilac to-lavender text-russian-violet font-bold px-8 sm:py-4 sm:px-10 rounded-full text-base sm:text-lg shadow-lg hover:shadow-2xl transition duration-300 ease-in-out"
           >
             Get Started With Us Today :D

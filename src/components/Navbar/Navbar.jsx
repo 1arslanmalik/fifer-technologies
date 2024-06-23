@@ -1,21 +1,30 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { lazy, useState } from 'react'
 import './Navbar.css'
-import { BiMenuAltRight } from 'react-icons/bi'
-import { RxCross2 } from 'react-icons/rx'
-import { FaLocationDot } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import { IoClose } from "react-icons/io5";
-import { AiOutlineHome, AiOutlineInfoCircle, AiOutlineCustomerService, AiOutlineContacts } from "react-icons/ai";
+import Link from 'next/link';
+
+
+const BiMenuAltRight = lazy(() => import('react-icons/bi').then(module => ({ default: module.BiMenuAltRight })))
+const RxCross2 = lazy(() => import('react-icons/rx').then(module => ({ default: module.RxCross2 })))
+const FaLocationDot = lazy(() => import('react-icons/fa6').then(module => ({ default: module.FaLocationDot })))
+const MdEmail = lazy(() => import('react-icons/md').then(module => ({ default: module.MdEmail })))
+const IoClose = lazy(() => import('react-icons/io5').then(module => ({ default: module.IoClose })))
+const AiOutlineHome = lazy(() => import('react-icons/ai').then(module => ({ default: module.AiOutlineHome })))
+const AiOutlineInfoCircle = lazy(() => import('react-icons/ai').then(module => ({ default: module.AiOutlineInfoCircle })))
+const AiOutlineCustomerService = lazy(() => import('react-icons/ai').then(module => ({ default: module.AiOutlineCustomerService })))
+const AiOutlineContacts = lazy(() => import('react-icons/ai').then(module => ({ default: module.AiOutlineContacts })))
+
 
 const Navbar = () => {
     const route = usePathname();
     useEffect(() => {
-        if (route === "/about") {
+        if (route === "/") {
+            setCurrentSection("Home")
+        }
+        else if (route === "/about") {
             setCurrentSection("About Us")
         }
         else if (route === "/contact") {
@@ -30,15 +39,15 @@ const Navbar = () => {
     }, [route])
 
     const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
-    const [currentSection, setCurrentSection] = useState("Home");
-    const router = useRouter()
-    const MenuItem = ({ icon, text, onClick }) => (
+    const [currentSection, setCurrentSection] = useState("");
+
+    const MenuItem = ({ icon, text, href, onClick }) => (
         <div
             className="flex items-center space-x-4 w-full py-3 px-4 rounded-lg hover:bg-ultra-violet transition-colors cursor-pointer"
             onClick={onClick}
         >
             {icon}
-            <span className="text-lg font-medium">{text}</span>
+            <Link href={href} className="text-lg font-medium">{text}</Link>
         </div>
     );
 
@@ -77,52 +86,52 @@ const Navbar = () => {
                         <div className="flex justify-end items-center space-x-12 w-full">
                             {
                                 <>
-                                    <button className='uppercase'>
-                                        <span
+                                    <button className='uppercase hover:bg-lavender hover:bg-opacity-20 px-2 rounded-sm py-1'>
+                                        <Link
+                                            href={"/"}
                                             className={`${currentSection === "Home" ? "text-white border-b-2 py-1 text-sm" : "null"}`}
                                             onClick={() => {
                                                 setCurrentSection("Home")
-                                                router.push("/")
                                             }}
                                         >
                                             Home
-                                        </span>
+                                        </Link>
                                     </button>
-                                    <button className='uppercase'>
-                                        <span
+                                    <button className='uppercase hover:bg-lavender hover:bg-opacity-20 px-2 rounded-sm py-1'>
+                                        <Link
+                                            href={"/about"}
                                             className={`${currentSection === "About Us" ? "text-white border-b-2 py-1" : "null"}`}
                                             onClick={() => {
                                                 setCurrentSection("About Us")
-                                                router.push("/about")
                                             }}
                                         >
                                             About Us
-                                        </span>
+                                        </Link>
                                     </button>
-                                    <button className='uppercase'>
-                                        <span
+                                    <button className='uppercase hover:bg-lavender hover:bg-opacity-20 px-2 rounded-sm py-1'>
+                                        <Link
+                                            href={"/services"}
                                             className={`${currentSection === "Services" ? "text-white border-b-2 py-1" : "null"}`}
                                             onClick={() => {
                                                 setCurrentSection("Services")
-                                                router.push("/services")
                                             }}
                                         >
                                             Services
-                                        </span>
+                                        </Link>
                                     </button>
-                                    <button className='uppercase'>
-                                        <span
+                                    <button className='uppercase hover:bg-lavender hover:bg-opacity-20 px-2 rounded-sm py-1'>
+                                        <Link
+                                            href={"/contact"}
                                             className={`${currentSection === "Contact Us" ? "text-white border-b-2 py-1" : "null"}`}
                                             onClick={() => {
                                                 setCurrentSection("Contact Us")
-                                                router.push("/contact")
                                             }
                                             }
                                         >
                                             Contact Us
-                                        </span>
+                                        </Link>
                                     </button>
-                                    <div className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center">
+                                    <div className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center hover:shadow-2xl transition duration-300 ease-in-out">
                                         <button className=''>Get Started</button>
                                     </div>
                                 </>
@@ -153,7 +162,7 @@ const Navbar = () => {
                             />
                         </div>
                 }
-                
+
                 {/* Mobile menu */}
                 <div
                     className={`
@@ -172,36 +181,37 @@ const Navbar = () => {
                             text="Home"
                             onClick={() => {
                                 setCurrentSection("Home");
-                                router.push("/");
                                 setMobileMenuOpened(false);
                             }}
+                            href={"/"}
                         />
                         <MenuItem
                             icon={<AiOutlineInfoCircle size={20} />}
                             text="About Us"
                             onClick={() => {
                                 setCurrentSection("About Us");
-                                router.push("/about");
                                 setMobileMenuOpened(false);
-                            }}
+                            }
+                        }
+                        href={"/about"}
                         />
                         <MenuItem
                             icon={<AiOutlineCustomerService size={20} />}
                             text="Services"
                             onClick={() => {
                                 setCurrentSection("Services");
-                                router.push("/services");
                                 setMobileMenuOpened(false);
                             }}
+                            href={"/services"}
                         />
                         <MenuItem
                             icon={<AiOutlineContacts size={20} />}
                             text="Contact Us"
                             onClick={() => {
                                 setCurrentSection("Contact Us");
-                                router.push("/contact");
                                 setMobileMenuOpened(false);
                             }}
+                            href={"/contact"}
                         />
                     </div>
                 </div>
