@@ -5,7 +5,7 @@ import Footer from "../src/components/Footer/Footer.jsx";
 
 export const metadata = {
   title: "Fifer Technologies",
-  description: "A Digital Marketing Agency",
+  description: "A Digital Marketing Agency to Empower your business with cutting-edge digital solutions",
 };
 
 const Josef = Josefin_Sans({

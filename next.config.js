@@ -6,18 +6,19 @@ const nextConfig = {
       '@react-email/components',
       '@react-email/render',
       '@react-email/tailwind'
-  ]
+    ]
   },
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: '**',
-          port: '',
-          pathname: '**',
-        },
-      ],
-    },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+        port: '',
+        pathname: '**',
+      },
+    ],
+    formats: ['image/webp'],
   }
-  
-  module.exports = nextConfig
+}
+
+module.exports = nextConfig
