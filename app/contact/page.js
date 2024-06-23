@@ -25,7 +25,6 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsUploading(true);
-    console.log(formData)
 
     try {
       const data = await fetch("/api", {

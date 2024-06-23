@@ -40,27 +40,27 @@ const Hero = () => {
                 <div className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16">
                     {/* Left Side */}
                     <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-center">
-    <div className="grid grid-cols-3 gap-2 mt-4 lg:mt-8">
-        {HeroData.map((person, i) => (
-            <div className='person-pill w-24 sm:w-32 md:w-40 lg:w-48 h-32 sm:h-40 md:h-48 lg:h-56 mx-1 sm:mx-2' key={i}>
-                <motion.div
-                    initial="initial"
-                    animate="animate"
-                    variants={variants(i * 0.1)}
-                    style={{ backgroundColor: person.bg }}
-                    className="person-pill-bg w-full h-full overflow-hidden rounded-[50px]">
-                    <Image
-                        src={person.src}
-                        alt={`Person ${i + 1}`}
-                        layout="fill"
-                        objectFit="cover"
-                        className="w-full h-full"
-                    />
-                </motion.div>
-            </div>
-        ))}
-    </div>
-</div>
+                        <div className="grid grid-cols-3 gap-2 mt-4 lg:mt-8">
+                            {HeroData.map((person, i) => (
+                                <div className='person-pill w-24 sm:w-32 md:w-40 lg:w-48 h-32 sm:h-40 md:h-48 lg:h-56 mx-1 sm:mx-2' key={i}>
+                                    <motion.div
+                                        initial="initial"
+                                        animate="animate"
+                                        variants={variants(i * 0.1)}
+                                        style={{ backgroundColor: person.bg }}
+                                        className="person-pill-bg w-full h-full overflow-hidden rounded-sm">
+                                        <Image
+                                            src={person.src}
+                                            alt={`Person ${i + 1}`}
+                                            layout="fill"
+                                            objectFit="cover"
+                                            className="w-full h-full"
+                                        />
+                                    </motion.div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                     {/* <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-center">
                         <div className="flex justify-center lg:justify-start overflow-x-auto">
                             <div className="image-row mt-4 lg:mt-8 flex-nowrap">
