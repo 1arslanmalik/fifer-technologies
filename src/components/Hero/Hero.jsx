@@ -6,6 +6,7 @@ import { HeroData } from '../../utils/data'
 import { motion } from 'framer-motion'
 import { FaRocket, FaChartLine, FaUsers } from 'react-icons/fa'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Hero = () => {
     const variants = (delay) => ({
@@ -38,24 +39,24 @@ const Hero = () => {
             <div className="mx-auto px-4 sm:px-6 py-6 lg:px-8 w-full">
                 <div className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16">
                     {/* Left Side */}
-                    <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-between">
+                    <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-center">
                         <div className="flex justify-center lg:justify-start overflow-x-auto">
                             <div className="image-row mt-4 lg:mt-8 flex-nowrap">
                                 {HeroData.slice(0, 3).map((person, i) => (
-                                    <div className='person-pill' key={i}>
+                                    <div className='person-pill w-24 sm:w-32 md:w-40 lg:w-48 h-24 sm:h-32 md:h-40 lg:h-48 mx-1 sm:mx-2' key={i}>
                                         <motion.div
                                             initial="initial"
                                             animate="animate"
                                             variants={variants(i * 0.1)}
                                             style={{ backgroundColor: person.bg }}
-                                            className="person-pill-bg">
-                                            <motion.img
-                                                initial="initial"
-                                                animate="animate"
-                                                variants={imgVariants()}
+                                            className="person-pill-bg w-full h-full relative overflow-hidden rounded-full">
+                                            <Image
                                                 src={person.src}
-                                                alt={person.src}
-                                                className="w-full h-full" />
+                                                alt={`Person ${i + 1}`}
+                                                layout="fill"
+                                                objectFit="cover"
+                                                className="w-full h-full"
+                                            />
                                         </motion.div>
                                     </div>
                                 ))}
@@ -64,20 +65,20 @@ const Hero = () => {
                         <div className="flex justify-center lg:justify-start overflow-x-auto">
                             <div className="image-row mx-2 mt-2 lg:mt-4 flex-nowrap">
                                 {HeroData.slice(3, 6).map((person, i) => (
-                                    <div className='person-pill' key={i}>
+                                    <div className='person-pill w-24 sm:w-32 md:w-40 lg:w-48 h-24 sm:h-32 md:h-40 lg:h-48 mx-1 sm:mx-2' key={i}>
                                         <motion.div
                                             initial="initial"
                                             animate="animate"
                                             variants={variants((i + 3) * 0.1)}
                                             style={{ backgroundColor: person.bg }}
-                                            className="person-pill-bg">
-                                            <motion.img
-                                                initial="initial"
-                                                animate="animate"
-                                                variants={imgVariants()}
+                                            className="person-pill-bg w-full h-full relative overflow-hidden rounded-full">
+                                            <Image
                                                 src={person.src}
-                                                alt={person.src}
-                                                className="w-full h-full object-cover" />
+                                                alt={`Person ${i + 4}`}
+                                                layout="fill"
+                                                objectFit="cover"
+                                                className="w-full h-full"
+                                            />
                                         </motion.div>
                                     </div>
                                 ))}
@@ -114,7 +115,7 @@ const Hero = () => {
                         </div>
 
                         <div className="fund-button w-full sm:w-auto text-white font-md flex justify-start items-start">
-                            <Link href="/about" className="uppercase bg-ultra-violet w-full sm:w-auto text-xs sm:text-sm md:text-base font-bold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full hover:bg-opacity-90 transition-all duration-300 ease-in-out">
+                            <Link href="/about" className="uppercase text-center bg-ultra-violet w-full sm:w-auto text-xs sm:text-sm md:text-base font-bold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full hover:bg-opacity-90 transition-all duration-300 ease-in-out">
                                 Get Started With Us
                             </Link>
                         </div>
