@@ -13,11 +13,11 @@ export default function Home() {
   // const controls = useAnimation()
 
   return (
-    <div className="flex flex-col">
+    <>
       <Hero />
       <WhoAreWe />
       <WhatWeDo />
       <Testimonials />
-    </div>
+    </>
   );
 }
