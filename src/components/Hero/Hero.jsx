@@ -40,16 +40,38 @@ const Hero = () => {
                 <div className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16">
                     {/* Left Side */}
                     <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-center">
+    <div className="grid grid-cols-3 gap-2 mt-4 lg:mt-8">
+        {HeroData.map((person, i) => (
+            <div className='person-pill w-24 sm:w-32 md:w-40 lg:w-48 h-32 sm:h-40 md:h-48 lg:h-56 mx-1 sm:mx-2' key={i}>
+                <motion.div
+                    initial="initial"
+                    animate="animate"
+                    variants={variants(i * 0.1)}
+                    style={{ backgroundColor: person.bg }}
+                    className="person-pill-bg w-full h-full overflow-hidden rounded-[50px]">
+                    <Image
+                        src={person.src}
+                        alt={`Person ${i + 1}`}
+                        layout="fill"
+                        objectFit="cover"
+                        className="w-full h-full"
+                    />
+                </motion.div>
+            </div>
+        ))}
+    </div>
+</div>
+                    {/* <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-center">
                         <div className="flex justify-center lg:justify-start overflow-x-auto">
                             <div className="image-row mt-4 lg:mt-8 flex-nowrap">
                                 {HeroData.slice(0, 3).map((person, i) => (
-                                    <div className='person-pill w-24 sm:w-32 md:w-40 lg:w-48 h-24 sm:h-32 md:h-40 lg:h-48 mx-1 sm:mx-2' key={i}>
+                                    <div className='person-pill w-24 sm:w-32 md:w-40 lg:w-48 h-24 sm:h-32 md:h-40 lg:h-50 mx-1 sm:mx-2' key={i}>
                                         <motion.div
                                             initial="initial"
                                             animate="animate"
                                             variants={variants(i * 0.1)}
                                             style={{ backgroundColor: person.bg }}
-                                            className="person-pill-bg w-full h-full relative overflow-hidden rounded-full">
+                                            className="person-pill-bg w-full h-full overflow-hidden rounded-full h-">
                                             <Image
                                                 src={person.src}
                                                 alt={`Person ${i + 1}`}
@@ -84,7 +106,7 @@ const Hero = () => {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* Right Side */}
                     <div className="w-full lg:w-1/2 order-1 lg:order-2 flex flex-col items-center lg:items-start overflow-x-hidden">
                         <div className="flex flex-col text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold space-y-2 sm:space-y-3 lg:space-y-5 w-full lg:w-3/4 h-title mb-6 sm:mb-8 text-center lg:text-left">

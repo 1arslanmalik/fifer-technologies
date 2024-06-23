@@ -33,27 +33,27 @@ export const HeroData = [
 
 export const slider = [
   {
-    imageLink: "pexels-andrew-2682318.jpg",
+    imageLink: "pexels-andrew-2682318.webp",
     heading: 'Innovative Solutions for Modern Businesses',
     description: 'Providing innovative digital marketing solutions tailored to the needs of modern businesses looking to thrive online.'
   },
   {
-    imageLink: "pexels-eva-bronzini-7661628.jpg",
+    imageLink: "pexels-eva-bronzini-7661628.webp",
     heading: 'Empowering Your Digital Journey',
     description: 'Guiding your business through the digital landscape with expertise, creativity, and a commitment to excellence.'
   },
   {
-    imageLink: "pexels-fauxels-3183197.jpg",
+    imageLink: "pexels-fauxels-3183197.webp",
     heading: 'Building Brands with Purpose',
     description: 'Our mission is to build meaningful connections between your brand and your audience through targeted digital solutions.'
   },
   {
-    imageLink: "pexels-fauxels-3184325.jpg",
+    imageLink: "pexels-fauxels-3184325.webp",
     heading: 'Strategic Digital Partners',
     description: 'Partnering with you to develop strategic digital solutions that achieve your business objectives.'
   },
   {
-    imageLink: "pexels-marketingtuig-185576.jpg",
+    imageLink: "pexels-marketingtuig-185576.webp",
     heading: 'Digital Solutions for a Connected World',
     description: 'Delivering digital solutions that connect your brand with its audience in meaningful ways.'
   },

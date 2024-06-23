@@ -192,8 +192,8 @@ const Navbar = () => {
                                 setCurrentSection("About Us");
                                 setMobileMenuOpened(false);
                             }
-                        }
-                        href={"/about"}
+                            }
+                            href={"/about"}
                         />
                         <MenuItem
                             icon={<AiOutlineCustomerService size={20} />}
