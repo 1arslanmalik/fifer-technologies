@@ -35,7 +35,7 @@ const Hero = () => {
 
     return (
         <div className="bg-blacklite flex items-center min-h-full">
-            <div className="mx-auto px-4 sm:px-6 py-6 lg:px-8">
+            <div className="px-4 sm:px-6 py-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16">
                     {/* Left Side */}
                     <div className="w-full lg:w-1/2 mb-8 lg:mb-0 flex flex-col items-between">
@@ -113,8 +113,8 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        <div className="fund-button w-full sm:w-auto text-white font-md flex justify-start items-start">
-                            <Link href="/about" className="uppercase bg-ultra-violet w-full sm:w-auto text-sm sm:text-base font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-opacity-90 transition-all duration-300 ease-in-out">
+                        <div className="fund-button w-full text-white font-md flex justify-start items-start">
+                            <Link href="/about" className="uppercase bg-ultra-violet w-full text-sm sm:text-base font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-opacity-90 transition-all duration-300 ease-in-out">
                                 Get Started With Us
                             </Link>
                         </div>
