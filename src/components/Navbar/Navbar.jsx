@@ -5,8 +5,7 @@ import './Navbar.css'
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react'
 import Link from 'next/link';
-import {Link as ReactLink} from "react-scroll"
-
+import { Link as ReactLink } from "react-scroll"
 
 const BiMenuAltRight = lazy(() => import('react-icons/bi').then(module => ({ default: module.BiMenuAltRight })))
 const RxCross2 = lazy(() => import('react-icons/rx').then(module => ({ default: module.RxCross2 })))
@@ -17,7 +16,6 @@ const AiOutlineHome = lazy(() => import('react-icons/ai').then(module => ({ defa
 const AiOutlineInfoCircle = lazy(() => import('react-icons/ai').then(module => ({ default: module.AiOutlineInfoCircle })))
 const AiOutlineCustomerService = lazy(() => import('react-icons/ai').then(module => ({ default: module.AiOutlineCustomerService })))
 const AiOutlineContacts = lazy(() => import('react-icons/ai').then(module => ({ default: module.AiOutlineContacts })))
-
 
 const Navbar = () => {
     const route = usePathname();
@@ -52,24 +50,26 @@ const Navbar = () => {
         </div>
     );
 
-
     return (
-        // locationa and email
-
         <div className={`sticky bg-russian-violet`}>
-            <div className="flex flex-col md:flex-row justify-evenly bg-ultra-violet bg-opacity-20">
-                <div className="h-full flex items-center w-full md:w-screen justify-evenly py-2">
-                    <div className="flex md:flex-row items-center md:mx-4">
-                        <div className="mx-3 flex items-center">
-                            <FaLocationDot />
-                        </div>
-                        <h1 className="text-white text-xs sm:text-sm md:text-base">1129 Main Street, Vancouver BC V6A4B6</h1>
+
+            <div className="bg-ultra-violet bg-opacity-20 px-2 py-2">
+                <div className="flex justify-evenly items-center space-x-3 text-[7px] xxs:text-[8px] xs:text-[9px] sm:text-[11px] md:text-[13px] lg:text-sm xl:text-base">
+                    <div className="flex items-center">
+                        <FaLocationDot className="w-[1em] h-[1em] flex-shrink-0 mr-[0.5em]" />
+                        <span className='text-white'>1129 Main Street Vancouver, BC Canada V6A4B6</span>
                     </div>
-                    <div className="flex md:flex-row items-center md:mx-4">
-                        <div className="mx-3 flex items-center">
-                            <MdEmail />
+                    <div className="flex items-center">
+                        <div className='flex items-center h-full'>
+                            <MdEmail className="w-[1em] h-[1em] flex-shrink-0 mr-[0.5em]" />
+
                         </div>
-                        <h1 className="text-white text-xs sm:text-sm md:text-base pr-5">fifertechnologies@gmail.com</h1>
+                        {/* <a href="mailto:fifertechnologies@gmail.com" className='text-white'>
+                        fifertechnologies@gmail.com
+                    </a> */}
+                        <a href="mailto:fifertechnologies@gmail.com" className='text-white'>
+                            info@fifertechnologies.com
+                        </a>
                     </div>
                 </div>
             </div>

@@ -42,7 +42,8 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <FaEnvelope className="mr-2" />
-                                <a href="mailto:info@innovatetech.com" className="hover:text-white transition-colors">fifertechnologies@gmail.com</a>
+                                <a href="mailto:info@innovatetech.com" className="hover:text-white transition-colors">info@fifertechnologies.com</a>
+                                {/* <a href="mailto:info@innovatetech.com" className="hover:text-white transition-colors">fifertechnologies@gmail.com</a> */}
                             </li>
                             {/* <li className="flex items-center">
                                 <FaPhone className="mr-2" />

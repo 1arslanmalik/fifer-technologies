@@ -4,7 +4,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
+
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -20,7 +20,12 @@ module.exports = {
       'blacklite': "#12130F",
       'platinum': "#EAE6E5"
     },
-    extend: {},
+    extend: {
+      screens: {
+        'xxs': '360px',
+        'xs': '480px',
+      }
+    }
   },
   plugins: [],
 }
