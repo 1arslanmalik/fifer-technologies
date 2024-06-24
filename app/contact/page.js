@@ -82,11 +82,11 @@ const ContactUs = () => {
             <div className="space-y-4">
               <div className="flex items-center text-platinum">
                 <FaEnvelope className="text-2xl mr-4" />
-                <span>fifertechnologies.com</span>
+                <span>fifertechnologies@gmail.com</span>
               </div>
               <div className="flex items-center text-platinum">
-                <FaPhone className="text-2xl mr-4" />
-                <span>+1 (555) 123-4567</span>
+                {/* <FaPhone className="text-2xl mr-4" />
+                <span>+1 (555) 123-4567</span> */}
               </div>
               <div className="flex items-center text-platinum">
                 <FaMapMarkerAlt className="text-2xl mr-4" />
@@ -96,15 +96,13 @@ const ContactUs = () => {
 
             {/* cards accepted */}
 
-
             <h3 className="mt-10 text-3xl font-bold text-lilac mb-4">We Accept</h3>
             <div className="flex justify-start items-center space-x-6 rounded-sm w-fit bg-opacity-70 p-2">
               <div className="bg-[#0D47A1] p-2">
-                <img src={"/creditcardlogos/visa.png"} alt="Visa" className="h-6" />
-
+                <img src={"/creditcardlogos/visa.webp"} alt="Visa" className="h-6" />
               </div>
-              <img src={"/creditcardlogos/mastercard.png"} alt="Mastercard" className="h-12" />
-              <img src={"/creditcardlogos/americanexpress.png"} alt="American Express" className="h-12" />
+              <img src={"/creditcardlogos/mastercard.webp"} alt="Mastercard" className="h-12" />
+              <img src={"/creditcardlogos/americanexpress.webp"} alt="American Express" className="h-12" />
             </div>
 
             {/* follow us */}
@@ -112,24 +110,26 @@ const ContactUs = () => {
             <div className="mt-10 mb-6">
               <h3 className="text-3xl font-bold text-lilac mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                {[
-                  // { name: 'facebook', icon: FaFacebook },
-                  { name: 'twitter', icon: FaTwitter },
-                  // { name: 'linkedin', icon: FaLinkedin },
-                  { name: 'instagram', icon: FaInstagram }
-                ].map((social) => (
                   <motion.a
-                    key={social.name}
-                    href={`https://${social.name}.com`}
+                    href={`https://instagram.com/fifer.tech`}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="bg-blacklite bg-opacity-70 p-3 rounded-full text-lavender hover:text-lilac transition-colors duration-300"
                   >
-                    <social.icon className="text-xl" />
+                    <FaInstagram className="text-xl" />
                   </motion.a>
-                ))}
+                  <motion.a
+                    href={`https://x.com/fifer_tech`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="bg-blacklite bg-opacity-70 p-3 rounded-full text-lavender hover:text-lilac transition-colors duration-300"
+                  >
+                    <FaTwitter className="text-xl" />
+                  </motion.a>
               </div>
             </div>
 

@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="w-full md:w-1/3 mb-8 md:mb-0">
                         <h2 className="text-3xl font-bold text-white mb-4">Fifer Technologies</h2>
                         <p className="mb-6">Transforming ideas into digital realities.</p>
-                        <p className="mb-6 font-bold">* Refund Within 90 days</p>
+                        {/* <p className="mb-6 font-bold">* Refund Within 90 days</p> */}
                         <div className="flex space-x-4">
                             {/* <FaFacebookF className="text-xl hover:text-blue-400 transition-colors cursor-pointer" /> */}
                             <FaTwitter className="text-xl hover:text-blue-400 transition-colors cursor-pointer" />
@@ -42,22 +42,24 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <FaEnvelope className="mr-2" />
-                                <a href="mailto:info@innovatetech.com" className="hover:text-white transition-colors">johndoe@gmail.com</a>
+                                <a href="mailto:info@innovatetech.com" className="hover:text-white transition-colors">fifertechnologies@gmail.com</a>
                             </li>
-                            <li className="flex items-center">
+                            {/* <li className="flex items-center">
                                 <FaPhone className="mr-2" />
                                 <span>(987) 654-3210</span>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
                 <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
                     <p>&copy; {new Date().getFullYear()} TechSolutions. All rights reserved.</p>
                     <div className="mt-4 md:mt-0">
+                    <p className="font-bold text-sm">* Refund Within 90 days</p>
                         {/* <a href="#" className="hover:text-white transition-colors mr-4">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a> */}
                     </div>
                 </div>
+
             </div>
         </footer>
     );

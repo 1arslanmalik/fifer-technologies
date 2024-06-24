@@ -69,7 +69,7 @@ const Navbar = () => {
                         <div className="mx-3 flex items-center">
                             <MdEmail />
                         </div>
-                        <h1 className="text-white text-xs sm:text-sm md:text-base pr-5">johndoe@gmail.com</h1>
+                        <h1 className="text-white text-xs sm:text-sm md:text-base pr-5">fifertechnologies@gmail.com</h1>
                     </div>
                 </div>
             </div>

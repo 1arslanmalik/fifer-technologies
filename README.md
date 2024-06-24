@@ -1,6 +1,8 @@
 TODO -
 
-[] Change the Nav Location when the site is scrolled.
-[] decrease the size of the slider images further (100-200kb)
-fix nav button
-fix about us button
+<!-- [] Change the Nav Location when the site is scrolled. -->
+<!-- [] decrease the size of the slider images further (100-200kb) -->
+<!-- fix nav button -->
+<!-- fix about us button -->
+change size of images of mastercard logos
+change email in footer
