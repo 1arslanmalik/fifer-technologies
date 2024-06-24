@@ -5,6 +5,7 @@ import './Navbar.css'
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react'
 import Link from 'next/link';
+import {Link as ReactLink} from "react-scroll"
 
 
 const BiMenuAltRight = lazy(() => import('react-icons/bi').then(module => ({ default: module.BiMenuAltRight })))
@@ -131,9 +132,9 @@ const Navbar = () => {
                                             Contact Us
                                         </Link>
                                     </button>
-                                    <div className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center hover:shadow-2xl transition duration-300 ease-in-out">
-                                        <button className=''>Get Started</button>
-                                    </div>
+                                    <Link href="/contact" className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center hover:shadow-2xl transition duration-300 ease-in-out">
+                                        <button className='hover:scale-1.5'>Get Started</button>
+                                    </Link>
                                 </>
                             }
                         </div>
