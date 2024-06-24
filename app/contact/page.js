@@ -97,12 +97,14 @@ const ContactUs = () => {
             {/* cards accepted */}
 
             <h3 className="mt-10 text-3xl font-bold text-lilac mb-4">We Accept</h3>
-            <div className="flex justify-start items-center space-x-6 rounded-sm w-fit bg-opacity-70 p-2">
-              <div className="bg-[#0D47A1] p-2">
+            <div className="flex justify-start items-center rounded-sm w-fit bg-opacity-70 p-2">
+              <div className="bg-[#0D47A1] p-2 mr-8">
                 <img src={"/creditcardlogos/visa.webp"} alt="Visa" className="h-6" />
               </div>
               <img src={"/creditcardlogos/mastercard.webp"} alt="Mastercard" className="h-12" />
-              <img src={"/creditcardlogos/americanexpress.webp"} alt="American Express" className="h-12" />
+              <div className="flex justify-start">
+              <img src={"/creditcardlogos/americanexpress.webp"} alt="American Express" className="h-20 flex justify-start" />
+              </div>
             </div>
 
             {/* follow us */}
