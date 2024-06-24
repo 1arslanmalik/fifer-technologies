@@ -209,7 +209,7 @@ const ContactUs = () => {
                 >
                   <FaEnvelope className="text-5xl text-lilac mb-4 mx-auto" />
                   <h2 className="text-2xl font-bold text-lilac mb-4">Thank You!</h2>
-                  <p className="text-platinum">Your message has been sent successfully. We'll get back to you soon.</p>
+                  <p className="text-platinum">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
                 </motion.div>
               ) : (
                 <motion.div
