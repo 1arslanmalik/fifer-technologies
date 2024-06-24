@@ -132,7 +132,7 @@ const Navbar = () => {
                                             Contact Us
                                         </Link>
                                     </button>
-                                    <Link href="/contact" className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center hover:shadow-2xl transition duration-300 ease-in-out">
+                                    <Link href="/contact" className="fund-button bg-ultra-violet text-white font-bold font-md flex justify-center hover:shadow-2xl hover:scale-110 transition duration-300 ease-in-out">
                                         <button className='hover:scale-1.5'>Get Started</button>
                                     </Link>
                                 </>

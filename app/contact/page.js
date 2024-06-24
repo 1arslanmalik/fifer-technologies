@@ -7,6 +7,10 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaFacebook, FaTwitte
 import { IoMdHome } from 'react-icons/io';
 import { RiSignalWifiErrorFill } from 'react-icons/ri';
 
+// import visa from '../../public/creditcardlogos/visa.png';
+// import MastercardLogo from '../../../public/creditcardlogos/Mastercard.png';
+// import AmexLogo from '../../public/creditcardlogos/americanexpress.png';
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -72,11 +76,13 @@ const ContactUs = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:w-1/2 max-w-md"
           >
+            {/* contact info */}
+
             <h2 className="text-3xl font-bold text-lilac mb-6">Contact Information</h2>
             <div className="space-y-4">
               <div className="flex items-center text-platinum">
                 <FaEnvelope className="text-2xl mr-4" />
-                <span>info@fifertechnologies.com</span>
+                <span>fifertechnologies.com</span>
               </div>
               <div className="flex items-center text-platinum">
                 <FaPhone className="text-2xl mr-4" />
@@ -88,13 +94,28 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="mt-12">
-              <h3 className="text-2xl font-bold text-lilac mb-4">Follow Us</h3>
+            {/* cards accepted */}
+
+
+            <h3 className="mt-10 text-3xl font-bold text-lilac mb-4">We Accept</h3>
+            <div className="flex justify-start items-center space-x-6 rounded-sm w-fit bg-opacity-70 p-2">
+              <div className="bg-[#0D47A1] p-2">
+                <img src={"/creditcardlogos/visa.png"} alt="Visa" className="h-6" />
+
+              </div>
+              <img src={"/creditcardlogos/mastercard.png"} alt="Mastercard" className="h-12" />
+              <img src={"/creditcardlogos/americanexpress.png"} alt="American Express" className="h-12" />
+            </div>
+
+            {/* follow us */}
+
+            <div className="mt-10 mb-6">
+              <h3 className="text-3xl font-bold text-lilac mb-4">Follow Us</h3>
               <div className="flex space-x-4">
                 {[
-                  { name: 'facebook', icon: FaFacebook },
+                  // { name: 'facebook', icon: FaFacebook },
                   { name: 'twitter', icon: FaTwitter },
-                  { name: 'linkedin', icon: FaLinkedin },
+                  // { name: 'linkedin', icon: FaLinkedin },
                   { name: 'instagram', icon: FaInstagram }
                 ].map((social) => (
                   <motion.a
@@ -111,6 +132,7 @@ const ContactUs = () => {
                 ))}
               </div>
             </div>
+
           </motion.div>
 
           <motion.div
@@ -187,7 +209,7 @@ const ContactUs = () => {
                 >
                   <FaEnvelope className="text-5xl text-lilac mb-4 mx-auto" />
                   <h2 className="text-2xl font-bold text-lilac mb-4">Thank You!</h2>
-                  <p className="text-platinum">Your message has been sent successfully. We&apos;ll get back to you soon.</p>
+                  <p className="text-platinum">Your message has been sent successfully. We'll get back to you soon.</p>
                 </motion.div>
               ) : (
                 <motion.div
@@ -243,6 +265,21 @@ const ContactUs = () => {
             )}
           </motion.div>
         </div>
+
+        {/* New section for payment logos */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="w-full max-w-md mt-12 lg:mt-24"
+        >
+          <h3 className="text-2xl font-bold text-lilac mb-4 text-center">We Accept</h3>
+          <div className="flex justify-center items-center space-x-6">
+            <img src={"/creditcardlogos/visa.png"} alt="Visa" className="h-12" />
+            <img src={"/creditcardlogos/mastercard.png"} alt="Mastercard" className="h-24" />
+            <img src={"/creditcardlogos/americanexpress.png"} alt="American Express" className="h-24" />
+          </div>
+        </motion.div> */}
       </div>
     </section>
   );

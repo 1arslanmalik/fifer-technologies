@@ -35,7 +35,7 @@ const Testimonials = () => {
             whileHover={{ scale: 1.03 }}
           >
             <FaStar className="text-5xl text-yellow-400 mb-4" />
-            <span className="text-3xl font-bold text-gray-900 mb-2">4.9</span>
+            <span className="text-3xl font-bold text-gray-900 mb-2">4.2</span>
             <span className="text-sm text-gray-600">Average Rating</span>
           </motion.div>
           <motion.div
@@ -43,7 +43,7 @@ const Testimonials = () => {
             whileHover={{ scale: 1.03 }}
           >
             <FaUserCircle className="text-5xl text-blue-500 mb-4" />
-            <span className="text-3xl font-bold text-gray-900 mb-2">10k+</span>
+            <span className="text-3xl font-bold text-gray-900 mb-2">700+</span>
             <span className="text-sm text-gray-600">Happy Clients</span>
           </motion.div>
         </div>
