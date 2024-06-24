@@ -2,6 +2,7 @@ import Navbar from "../src/components/Navbar/Navbar.jsx";
 import "./globals.css";
 import { Josefin_Sans } from 'next/font/google';
 import Footer from "../src/components/Footer/Footer.jsx";
+import { Providers } from "./provider.js";
 
 export const metadata = {
   title: "Fifer Technologies",
@@ -22,11 +23,13 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </head>
       <body className={`${Josef.className}`}>
-        <div className="home">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <Providers>
+          <div className="home">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
