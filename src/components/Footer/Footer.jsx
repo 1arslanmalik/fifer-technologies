@@ -38,11 +38,12 @@ const Footer = () => {
                         <ul className="space-y-2">
                             <li className="flex items-center">
                                 <FaMapMarkerAlt className="mr-2" />
-                                <span>1129 Main Street, Vancouver BC V6A4B6</span>
+                                {/* <span>1129 Main Street, Vancouver BC V6A4B6</span> */}
+                                <span>1129 Main Street Vancouver, BC Canada V6A4B6</span>
                             </li>
                             <li className="flex items-center">
                                 <FaEnvelope className="mr-2" />
-                                <a href="mailto:info@innovatetech.com" className="hover:text-white transition-colors">info@fifertechnologies.com</a>
+                                <a href="mailto:info@fifertechnologies.com" className="hover:text-white transition-colors">info@fifertechnologies.com</a>
                                 {/* <a href="mailto:info@innovatetech.com" className="hover:text-white transition-colors">fifertechnologies@gmail.com</a> */}
                             </li>
                             {/* <li className="flex items-center">
@@ -53,7 +54,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-                    <p>&copy; {new Date().getFullYear()} TechSolutions. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Fifer Technologies. All rights reserved.</p>
                     <div className="mt-4 md:mt-0">
                     <p className="font-bold text-sm">* Refund Within 90 days</p>
                         {/* <a href="#" className="hover:text-white transition-colors mr-4">Privacy Policy</a>

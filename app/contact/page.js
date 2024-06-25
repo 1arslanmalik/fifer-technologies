@@ -83,7 +83,8 @@ const ContactUs = () => {
               <div className="flex items-center text-platinum">
                 <FaEnvelope className="text-2xl mr-4" />
                 {/* <span>fifertechnologies@gmail.com</span> */}
-                <span>support@infertechnologies.com</span>
+                {/* <span>support@fifertechnologies.com</span> */}
+                <a href="mailto:info@fifertechnologies.com" className="hover:text-white transition-colors">info@fifertechnologies.com</a>
               </div>
               <div className="flex items-center text-platinum">
                 {/* <FaPhone className="text-2xl mr-4" />
