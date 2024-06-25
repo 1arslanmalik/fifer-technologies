@@ -67,7 +67,7 @@ const Navbar = () => {
                         {/* <a href="mailto:fifertechnologies@gmail.com" className='text-white'>
                         fifertechnologies@gmail.com
                     </a> */}
-                        <a href="mailto:fifertechnologies@gmail.com" className='text-white'>
+                        <a href="mailto:info@fifertechnologies.com" className='text-white'>
                             info@fifertechnologies.com
                         </a>
                     </div>
