@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSpinner } from 'react-icons/fa';
 import { IoMdHome } from 'react-icons/io';
 import { RiSignalWifiErrorFill } from 'react-icons/ri';
+import Link from "next/link";
 
 // import visa from '../../public/creditcardlogos/visa.png';
 // import MastercardLogo from '../../../public/creditcardlogos/Mastercard.png';
@@ -249,14 +250,15 @@ const ContactUs = () => {
                     Our servers are taking a quick breather. Please try again later.
                   </motion.p>
 
-                  <motion.button
+                  <Link
                     className="bg-lavender text-russian-violet rounded-full px-6 py-3 text-lg sm:text-xl flex items-center justify-center mx-auto hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    href={"/"}
                   >
                     <IoMdHome className="mr-2" />
                     Return Home
-                  </motion.button>
+                  </Link>
 
                   <motion.div
                     className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
