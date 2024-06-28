@@ -18,7 +18,8 @@ module.exports = {
       'white': "#ffffff",
       'black': "#000000",
       'blacklite': "#12130F",
-      'platinum': "#EAE6E5"
+      'platinum': "#EAE6E5",
+      'blue': "#0000ff"
     },
     extend: {
       screens: {

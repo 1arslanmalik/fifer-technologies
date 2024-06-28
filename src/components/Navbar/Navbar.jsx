@@ -5,7 +5,6 @@ import './Navbar.css'
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react'
 import Link from 'next/link';
-import { Link as ReactLink } from "react-scroll"
 
 const BiMenuAltRight = lazy(() => import('react-icons/bi').then(module => ({ default: module.BiMenuAltRight })))
 const RxCross2 = lazy(() => import('react-icons/rx').then(module => ({ default: module.RxCross2 })))
@@ -33,7 +32,7 @@ const Navbar = () => {
             setCurrentSection("Services")
         }
         else {
-            setCurrentSection("Home")
+            setCurrentSection("")
         }
     }, [route])
 

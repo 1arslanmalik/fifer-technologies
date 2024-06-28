@@ -24,6 +24,7 @@ const Footer = () => {
                             <ul className='flex flex-col'>
                                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
                                 <Link href="/about" className="hover:text-white transition-colors">About</Link>
+                                <Link href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</Link>
                                 {/* <li><a href="#" className="hover:text-white transition-colors">Portfolio</a></li> */}
                             </ul>
                             <ul className='flex flex-col'>
