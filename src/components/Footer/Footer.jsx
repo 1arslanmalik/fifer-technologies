@@ -56,7 +56,7 @@ const Footer = () => {
                 <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
                     <p>&copy; {new Date().getFullYear()} Fifer Technologies. All rights reserved.</p>
                     <div className="mt-4 md:mt-0">
-                    <p className="font-bold text-sm">* Refund Within 90 days</p>
+                    {/* <p className="font-bold text-sm">* Refund Within 90 days</p> */}
                         {/* <a href="#" className="hover:text-white transition-colors mr-4">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a> */}
                     </div>
