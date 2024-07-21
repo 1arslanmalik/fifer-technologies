@@ -13,9 +13,14 @@ const Footer = () => {
                         {/* <p className="mb-6 font-bold">* Refund Within 90 days</p> */}
                         <div className="flex space-x-4">
                             {/* <FaFacebookF className="text-xl hover:text-blue-400 transition-colors cursor-pointer" /> */}
-                            <FaTwitter className="text-xl hover:text-blue-400 transition-colors cursor-pointer" />
                             {/* <FaLinkedinIn className="text-xl hover:text-blue-400 transition-colors cursor-pointer" /> */}
-                            <FaInstagram className="text-xl hover:text-pink-400 transition-colors cursor-pointer" />
+                            <Link href={`https://x.com/fifer_tech`}
+                            >
+                                <FaTwitter className="text-xl hover:text-lavender transition-colors cursor-pointer" />
+                            </Link>
+                            <Link href={`https://instagram.com/fifer.tech`}>
+                                <FaInstagram className="text-xl hover:text-lavender transition-colors cursor-pointer" href={`https://x.com/fifer_tech`} />
+                            </Link>
                         </div>
                     </div>
                     <div className="w-full md:w-1/3 mb-8 md:mb-0">
@@ -57,7 +62,7 @@ const Footer = () => {
                 <div className="mt-10 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
                     <p>&copy; {new Date().getFullYear()} Fifer Technologies. All rights reserved.</p>
                     <div className="mt-4 md:mt-0">
-                    {/* <p className="font-bold text-sm">* Refund Within 90 days</p> */}
+                        {/* <p className="font-bold text-sm">* Refund Within 90 days</p> */}
                         {/* <a href="#" className="hover:text-white transition-colors mr-4">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a> */}
                     </div>
